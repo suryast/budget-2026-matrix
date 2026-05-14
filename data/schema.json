@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://factual-au.setiyaputra.me/schema/matrix.json",
+  "title": "Budget 2026 Investor Action Matrix v2",
+  "description": "Data contract for the archetype x life_stage x scenario action matrix, with voter cohort tagging. See SPEC.md v2 for editorial rules.",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "axes", "cells"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "2"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceCommit": {
+      "type": "string"
+    },
+    "axes": {
+      "type": "object",
+      "required": ["archetypes", "lifeStages", "scenarios", "cohortDimensions"],
+      "additionalProperties": false,
+      "properties": {
+        "archetypes": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/definitions/axisEntry" }
+        },
+        "lifeStages": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "$ref": "#/definitions/axisEntry" }
+        },
+        "scenarios": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": { "$ref": "#/definitions/axisEntry" }
+        },
+        "cohortDimensions": {
+          "type": "object",
+          "required": ["demographic", "economic", "electoral"],
+          "additionalProperties": false,
+          "properties": {
+            "demographic": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/axisEntry" }
+            },
+            "economic": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/axisEntry" }
+            },
+            "electoral": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/axisEntry" }
+            }
+          }
+        }
+      }
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 120,
+      "maxItems": 120,
+      "items": { "$ref": "#/definitions/cell" }
+    }
+  },
+  "definitions": {
+    "axisEntry": {
+      "type": "object",
+      "required": ["id", "label", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 280 },
+        "markdownPath": { "type": "string" }
+      }
+    },
+    "archetypeId": {
+      "type": "string",
+      "enum": ["passive", "property", "active", "founder"]
+    },
+    "lifeStageId": {
+      "type": "string",
+      "enum": ["early_career", "mid_career_fhb", "peak_earner", "pre_retiree_bridge", "retiree_decum"]
+    },
+    "scenarioId": {
+      "type": "string",
+      "enum": ["s_announced", "s_delayed", "s_repealed", "s_founder_relief", "s_floor_dropped", "s_hybrid"]
+    },
+    "demographicCohort": {
+      "type": "string",
+      "enum": ["gen_z", "millennial", "gen_x", "boomer", "pensioner"]
+    },
+    "economicCohort": {
+      "type": "string",
+      "enum": ["renter", "fhb_aspirant", "owner_occupier", "landlord", "asset_rich_retiree"]
+    },
+    "electoralCohort": {
+      "type": "string",
+      "enum": ["inner_metro_progressive", "outer_suburb_mortgage_belt", "regional", "teal_seat", "safe_coalition"]
+    },
+    "calculatorScenarioId": {
+      "type": "string",
+      "enum": [
+        "budget-2026-young-etf-home-deposit-claim",
+        "budget-2026-zero-cost-base-business-claim",
+        "budget-2026-fire-bridge-phase-claim",
+        "budget-2026-young-founder-net-exit-claim",
+        "budget-2026-subdiv152-founder-relief-claim",
+        "budget-2026-pre-cgt-assets-claim",
+        "budget-2026-family-home-distortion-claim",
+        "budget-2026-cgt-founder-claim",
+        "budget-2026-capital-vs-labour-tax-claim",
+        "housing-claim-negative-gearing"
+      ]
+    },
+    "cell": {
+      "type": "object",
+      "required": [
+        "cellId", "archetype", "lifeStage", "scenario",
+        "action", "actionRationale",
+        "expectedPayoff", "payoffNarrative",
+        "regret", "keyAssumption",
+        "calculatorAnchor", "verdictTone",
+        "usesStructure", "salientFor", "cohortNote"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cellId": {
+          "type": "string",
+          "pattern": "^(passive|property|active|founder)__(early_career|mid_career_fhb|peak_earner|pre_retiree_bridge|retiree_decum)__(s_announced|s_delayed|s_repealed|s_founder_relief|s_floor_dropped|s_hybrid)$"
+        },
+        "archetype": { "$ref": "#/definitions/archetypeId" },
+        "lifeStage": { "$ref": "#/definitions/lifeStageId" },
+        "scenario": { "$ref": "#/definitions/scenarioId" },
+        "action": { "type": "string", "minLength": 8, "maxLength": 240 },
+        "actionRationale": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "expectedPayoff": {
+          "type": "string",
+          "enum": ["strongly_positive", "positive", "neutral", "negative", "strongly_negative"]
+        },
+        "payoffNarrative": { "type": "string", "minLength": 10, "maxLength": 400 },
+        "regret": {
+          "type": "object",
+          "required": ["ifScenario", "severity", "description"],
+          "additionalProperties": false,
+          "properties": {
+            "ifScenario": { "$ref": "#/definitions/scenarioId" },
+            "severity": { "type": "string", "enum": ["low", "medium", "high"] },
+            "description": { "type": "string", "minLength": 20, "maxLength": 500 }
+          }
+        },
+        "keyAssumption": { "type": "string", "minLength": 20, "maxLength": 500 },
+        "calculatorAnchor": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": ["scenarioId", "label"],
+              "additionalProperties": false,
+              "properties": {
+                "scenarioId": { "$ref": "#/definitions/calculatorScenarioId" },
+                "label": { "type": "string", "minLength": 4, "maxLength": 80 }
+              }
+            }
+          ]
+        },
+        "verdictTone": {
+          "type": "string",
+          "enum": ["confident", "hedged", "speculative"]
+        },
+        "usesStructure": { "type": "boolean" },
+        "salientFor": {
+          "type": "object",
+          "required": ["voterCohorts"],
+          "additionalProperties": false,
+          "properties": {
+            "voterCohorts": {
+              "type": "object",
+              "required": ["demographic", "economic", "electoral"],
+              "additionalProperties": false,
+              "properties": {
+                "demographic": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": { "$ref": "#/definitions/demographicCohort" }
+                },
+                "economic": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": { "$ref": "#/definitions/economicCohort" }
+                },
+                "electoral": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": { "$ref": "#/definitions/electoralCohort" }
+                }
+              }
+            }
+          }
+        },
+        "cohortNote": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "minLength": 10, "maxLength": 400 }
+          ]
+        },
+        "narrativesReferenced": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}
