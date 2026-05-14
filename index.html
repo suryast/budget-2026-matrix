@@ -26,7 +26,7 @@
         <div class="panel-head">
           <div>
             <h2>Browse the matrix</h2>
-            <p class="muted">Filter by archetype, life stage, or policy scenario.</p>
+            <p class="muted">2×2 archetype grid. Click a dot to open the full cell in the sidebar.</p>
           </div>
           <div class="filters">
             <label>
@@ -44,7 +44,46 @@
           </div>
         </div>
         <p class="count-line" id="count-line"></p>
-        <div class="grid" id="cards"></div>
+        <div class="matrix-layout">
+          <section class="matrix-board" id="matrix-board"></section>
+          <aside class="detail-sidebar is-empty" id="detail-sidebar">
+            <div class="sidebar-placeholder">
+              <p class="eyebrow">Cell details</p>
+              <h3>Select a dot</h3>
+              <p class="muted">
+                Pick any visible point in the matrix to reveal the action, rationale, assumptions, regret,
+                and calculator anchor.
+              </p>
+            </div>
+            <article class="detail-card" id="detail-card" hidden>
+              <div class="card-topline">
+                <span class="pill pill-archetype detail-archetype"></span>
+                <span class="pill pill-payoff detail-payoff"></span>
+              </div>
+              <h3 class="detail-title"></h3>
+              <p class="detail-action"></p>
+              <p class="detail-rationale muted"></p>
+              <dl class="meta-list">
+                <div>
+                  <dt>Assumption</dt>
+                  <dd class="detail-assumption"></dd>
+                </div>
+                <div>
+                  <dt>Regret if wrong</dt>
+                  <dd class="detail-regret"></dd>
+                </div>
+                <div>
+                  <dt>Calculator anchor</dt>
+                  <dd class="detail-anchor"></dd>
+                </div>
+                <div>
+                  <dt>Political salience</dt>
+                  <dd class="detail-cohort"></dd>
+                </div>
+              </dl>
+            </article>
+          </aside>
+        </div>
       </section>
 
       <section class="panel panel-secondary">
@@ -58,30 +97,21 @@
       </section>
     </main>
 
-    <template id="card-template">
-      <article class="card">
-        <div class="card-topline">
-          <span class="pill pill-archetype"></span>
-          <span class="pill pill-payoff"></span>
+    <template id="quadrant-template">
+      <section class="quadrant">
+        <div class="quadrant-head">
+          <div>
+            <p class="eyebrow quadrant-kicker">Archetype</p>
+            <h3 class="quadrant-title"></h3>
+          </div>
+          <p class="muted quadrant-summary"></p>
         </div>
-        <h3 class="card-title"></h3>
-        <p class="card-action"></p>
-        <p class="card-rationale muted"></p>
-        <dl class="meta-list">
-          <div>
-            <dt>Assumption</dt>
-            <dd class="assumption"></dd>
-          </div>
-          <div>
-            <dt>Regret if wrong</dt>
-            <dd class="regret"></dd>
-          </div>
-          <div>
-            <dt>Calculator anchor</dt>
-            <dd class="anchor"></dd>
-          </div>
-        </dl>
-      </article>
+        <div class="quadrant-body">
+          <div class="scenario-axis quadrant-axis-top"></div>
+          <div class="life-axis quadrant-axis-left"></div>
+          <div class="dot-grid"></div>
+        </div>
+      </section>
     </template>
 
     <script>
@@ -100,6 +130,7 @@
       };
 
       const $ = (selector) => document.querySelector(selector);
+      const archetypeOrder = ["passive", "property", "active", "founder"];
 
       function fillSelect(select, options, allLabel) {
         select.innerHTML = "";
@@ -115,27 +146,81 @@
         });
       }
 
-      function renderCards(cells) {
-        const root = $("#cards");
-        root.innerHTML = "";
-        const template = $("#card-template");
+      function openDetail(cell) {
+        const sidebar = $("#detail-sidebar");
+        const card = $("#detail-card");
+        sidebar.classList.remove("is-empty");
+        card.hidden = false;
+        $(".detail-archetype").textContent = titleCase(cell.archetype);
+        $(".detail-payoff").textContent = payoffLabel[cell.expectedPayoff] || titleCase(cell.expectedPayoff);
+        $(".detail-payoff").dataset.payoff = cell.expectedPayoff;
+        $(".detail-title").textContent = `${titleCase(cell.lifeStage)} • ${titleCase(cell.scenario)}`;
+        $(".detail-action").textContent = cell.action;
+        $(".detail-rationale").textContent = cell.actionRationale;
+        $(".detail-assumption").textContent = cell.keyAssumption;
+        $(".detail-regret").textContent =
+          `${titleCase(cell.regret.severity)} if ${titleCase(cell.regret.ifScenario)}: ${cell.regret.description}`;
+        $(".detail-anchor").textContent = cell.calculatorAnchor
+          ? `${cell.calculatorAnchor.label} (${cell.calculatorAnchor.scenarioId})`
+          : "None";
+        $(".detail-cohort").textContent = cell.cohortNote || "None";
+      }
 
-        cells.forEach((cell) => {
+      function renderQuadrants(payload, cells) {
+        const board = $("#matrix-board");
+        const template = $("#quadrant-template");
+        board.innerHTML = "";
+
+        const archetypeMap = Object.fromEntries(payload.axes.archetypes.map((item) => [item.id, item]));
+
+        archetypeOrder.forEach((archetypeId) => {
+          const archetype = archetypeMap[archetypeId];
           const node = template.content.cloneNode(true);
-          node.querySelector(".pill-archetype").textContent = titleCase(cell.archetype);
-          node.querySelector(".pill-payoff").textContent = payoffLabel[cell.expectedPayoff] || titleCase(cell.expectedPayoff);
-          node.querySelector(".pill-payoff").dataset.payoff = cell.expectedPayoff;
-          node.querySelector(".card-title").textContent =
-            `${titleCase(cell.lifeStage)} • ${titleCase(cell.scenario)}`;
-          node.querySelector(".card-action").textContent = cell.action;
-          node.querySelector(".card-rationale").textContent = cell.actionRationale;
-          node.querySelector(".assumption").textContent = cell.keyAssumption;
-          node.querySelector(".regret").textContent =
-            `${titleCase(cell.regret.severity)} if ${titleCase(cell.regret.ifScenario)}: ${cell.regret.description}`;
-          node.querySelector(".anchor").textContent = cell.calculatorAnchor
-            ? `${cell.calculatorAnchor.label} (${cell.calculatorAnchor.scenarioId})`
-            : "None";
-          root.appendChild(node);
+          node.querySelector(".quadrant-title").textContent = archetype.label;
+          node.querySelector(".quadrant-summary").textContent = archetype.summary;
+
+          const scenarioAxis = node.querySelector(".scenario-axis");
+          payload.axes.scenarios.forEach((scenario) => {
+            const span = document.createElement("span");
+            span.textContent = scenario.label.replace("Passes as ", "").replace("Delayed past ", "Delayed ");
+            scenarioAxis.appendChild(span);
+          });
+
+          const lifeAxis = node.querySelector(".life-axis");
+          payload.axes.lifeStages.forEach((lifeStage) => {
+            const span = document.createElement("span");
+            span.textContent = lifeStage.label;
+            lifeAxis.appendChild(span);
+          });
+
+          const grid = node.querySelector(".dot-grid");
+          const localCells = cells.filter((cell) => cell.archetype === archetypeId);
+          payload.axes.lifeStages.forEach((lifeStage, rowIndex) => {
+            payload.axes.scenarios.forEach((scenario, colIndex) => {
+              const cell = localCells.find(
+                (entry) => entry.lifeStage === lifeStage.id && entry.scenario === scenario.id
+              );
+              const button = document.createElement("button");
+              button.type = "button";
+              button.className = "dot";
+              button.style.gridColumn = String(colIndex + 1);
+              button.style.gridRow = String(rowIndex + 1);
+              if (cell) {
+                button.dataset.payoff = cell.expectedPayoff;
+                button.dataset.visible = "true";
+                button.title = `${lifeStage.label} • ${scenario.label}`;
+                button.setAttribute("aria-label", `${archetype.label}: ${lifeStage.label}, ${scenario.label}`);
+                button.addEventListener("click", () => openDetail(cell));
+              } else {
+                button.disabled = true;
+                button.classList.add("dot-hidden");
+                button.setAttribute("aria-hidden", "true");
+              }
+              grid.appendChild(button);
+            });
+          });
+
+          board.appendChild(node);
         });
       }
 
@@ -166,7 +251,7 @@
             );
           });
           countLine.textContent = `Showing ${filtered.length} matrix cells`;
-          renderCards(filtered);
+          renderQuadrants(payload, filtered);
         };
 
         archetypeFilter.addEventListener("change", update);
