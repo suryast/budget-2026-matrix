@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2",
-  "generatedAt": "2026-05-14T03:13:25Z",
-  "sourceCommit": "",
+  "generatedAt": "2026-05-14T13:59:47Z",
+  "sourceCommit": "c3fb27d80719db7c3299ebb03ed40b62d16a1639",
   "axes": {
     "archetypes": [
       {
@@ -19,7 +19,7 @@
       {
         "id": "active",
         "label": "Active investor",
-        "summary": "Returns depend on own decisions or structure. Includes FIRE, frequent traders, and trust-led strategies.",
+        "summary": "Returns depend on own decisions or deliberate structure use. Includes frequent traders, concentrated bets, and trust-led strategies.",
         "markdownPath": "archetypes/active.md"
       },
       {
@@ -65,7 +65,7 @@
       {
         "id": "s_announced",
         "label": "Passes as announced",
-        "summary": "Discount replaced by indexation plus a 30 percent floor from 1 Jul 2027; NG restricted to new builds.",
+        "summary": "From 1 Jul 2027 the CGT discount is replaced by indexation plus a 30 percent floor; established residential property bought after Budget night faces quarantined negative gearing, with a grace window through 30 Jun 2027 and a stronger new-build carve-out.",
         "markdownPath": "scenarios/s_announced.md"
       },
       {
@@ -191,8 +191,8 @@
       "scenario": "s_announced",
       "action": "Stage pre-2027 parcel sales only where they serve a real near-term goal, and keep fresh savings on the long-horizon plan rather than abandoning equities.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mainly preserves options while the rule change remains costly but manageable.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -271,7 +271,7 @@
       "scenario": "s_repealed",
       "action": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -311,8 +311,8 @@
       "scenario": "s_founder_relief",
       "action": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -392,7 +392,7 @@
       "action": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -431,8 +431,8 @@
       "scenario": "s_announced",
       "action": "Stage pre-2027 parcel sales only where they serve a real near-term goal, and keep fresh savings on the long-horizon plan rather than abandoning equities.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mainly preserves options while the rule change remains costly but manageable.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -513,7 +513,7 @@
       "scenario": "s_repealed",
       "action": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -554,8 +554,8 @@
       "scenario": "s_founder_relief",
       "action": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -637,7 +637,7 @@
       "action": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -677,8 +677,8 @@
       "scenario": "s_announced",
       "action": "Stage pre-2027 parcel sales only where they serve a real near-term goal, and keep fresh savings on the long-horizon plan rather than abandoning equities.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -716,8 +716,8 @@
       "scenario": "s_delayed",
       "action": "Avoid irreversible pre-emptive sales and keep building under the current rules while preserving records for a possible later transition.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -755,7 +755,7 @@
       "scenario": "s_repealed",
       "action": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -794,8 +794,8 @@
       "scenario": "s_founder_relief",
       "action": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -872,8 +872,8 @@
       "scenario": "s_hybrid",
       "action": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -991,7 +991,7 @@
       "scenario": "s_repealed",
       "action": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -1031,8 +1031,8 @@
       "scenario": "s_founder_relief",
       "action": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -1071,8 +1071,8 @@
       "scenario": "s_floor_dropped",
       "action": "Prefer deferral over early realisation, but reassess low-bracket sale windows because indexation without the floor softens long-hold outcomes.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "strongly_positive",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from a materially softer tax drag once the floor stops flattening outcomes.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -1112,7 +1112,7 @@
       "action": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -1231,7 +1231,7 @@
       "scenario": "s_repealed",
       "action": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -1271,8 +1271,8 @@
       "scenario": "s_founder_relief",
       "action": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -1311,8 +1311,8 @@
       "scenario": "s_floor_dropped",
       "action": "Prefer deferral over early realisation, but reassess low-bracket sale windows because indexation without the floor softens long-hold outcomes.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "strongly_positive",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from a materially softer tax drag once the floor stops flattening outcomes.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -1351,7 +1351,7 @@
       "scenario": "s_hybrid",
       "action": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
       "actionRationale": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
       "regret": {
         "ifScenario": "s_floor_dropped",
@@ -1389,16 +1389,16 @@
       "archetype": "property",
       "lifeStage": "early_career",
       "scenario": "s_announced",
-      "action": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "action": "If an established-property purchase still works once losses quarantine from 1 Jul 2027, complete it only for grace-window economics; otherwise switch the search to eligible new builds or stand down.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
         "description": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. The announced mechanics survive broadly intact through legislation and implementation.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1431,16 +1431,16 @@
       "archetype": "property",
       "lifeStage": "early_career",
       "scenario": "s_delayed",
-      "action": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "action": "Use the delay to test whether the property still works on a quarantined-loss basis, but do not overpay as if full grandfathering on established property were still available.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The delay helps less than it sounds because the underlying economics are still weak for this cohort.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
         "description": "If the package suddenly proceeds as announced, waiting too calmly can leave less time to act on valuation-reset, deduction-cutoff, or exit-timing mechanics. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. Delay is long enough to matter operationally rather than a symbolic pause.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1474,15 +1474,15 @@
       "lifeStage": "early_career",
       "scenario": "s_repealed",
       "action": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "low",
         "description": "If the announced package unexpectedly lands after all, the reader may have under-prepared for timing and relief questions that become relevant again. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. Repeal is durable enough that there is no need to keep shadow-planning the announced branch.",
+      "keyAssumption": "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1515,16 +1515,16 @@
       "archetype": "property",
       "lifeStage": "early_career",
       "scenario": "s_founder_relief",
-      "action": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "action": "Treat founder relief as irrelevant to the property call and buy only if the established-property case still works after the grace window ends; otherwise move to new builds or wait.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
         "description": "If founder relief fails to arrive and the announced package proceeds instead, holding for a carve-out can mean a worse after-tax exit and a harder negotiation window. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. The carve-out, if it lands, is actually available to the reader rather than politically adjacent to them.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1557,16 +1557,16 @@
       "archetype": "property",
       "lifeStage": "early_career",
       "scenario": "s_floor_dropped",
-      "action": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "action": "Treat the housing rules as unchanged and buy only if the property still works once established-property losses quarantine from 1 Jul 2027; the softer CGT side is not enough on its own.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
         "description": "If the floor survives after all, a sale or hold decision built around indexation-only softness may understate the real tax drag. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. Indexation remains the governing logic and is not later traded away in a compromise package.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1599,16 +1599,16 @@
       "archetype": "property",
       "lifeStage": "early_career",
       "scenario": "s_hybrid",
-      "action": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "action": "Even with a softer CGT branch, only proceed if the established-property purchase works after the grace window ends and losses quarantine; otherwise avoid forced-turnover property bets.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends. Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
         "description": "If indexation survives instead, acting like the discount is the main cushion can mis-price the benefit of lower inflation-adjusted gains. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Early mistakes are mostly behavioural, so overreaction is the dominant risk. The surviving discount and floor combination is legislated in a form close enough to this scenario to plan against.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
         "label": "Test established-property scenario"
@@ -1641,19 +1641,19 @@
       "archetype": "property",
       "lifeStage": "mid_career_fhb",
       "scenario": "s_announced",
-      "action": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "action": "If an established-property purchase still works once losses quarantine from 1 Jul 2027, complete it only for grace-window economics; otherwise switch the search to eligible new builds or stand down.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "The grace-window negative-gearing benefit is real but short-lived. The action's payoff depends far more on whether the property still works once losses quarantine from 1 Jul 2027 than on capturing a temporary deduction.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
-        "description": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
+        "description": "If the package is repealed, the property reverts to full negative-gearing treatment indefinitely, which is a windfall rather than a pure regret. The real regret risk is having paid too much for the asset because grace-window urgency distorted the purchase discipline."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. The announced mechanics survive broadly intact through legislation and implementation.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -1683,19 +1683,19 @@
       "archetype": "property",
       "lifeStage": "mid_career_fhb",
       "scenario": "s_delayed",
-      "action": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "action": "Use the delay to test whether the property still works on a quarantined-loss basis, but do not overpay as if full grandfathering on established property were still available.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
         "description": "If the package suddenly proceeds as announced, waiting too calmly can leave less time to act on valuation-reset, deduction-cutoff, or exit-timing mechanics. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. Delay is long enough to matter operationally rather than a symbolic pause.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -1726,18 +1726,18 @@
       "lifeStage": "mid_career_fhb",
       "scenario": "s_repealed",
       "action": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "low",
         "description": "If the announced package unexpectedly lands after all, the reader may have under-prepared for timing and relief questions that become relevant again. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. Repeal is durable enough that there is no need to keep shadow-planning the announced branch.",
+      "keyAssumption": "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "confident",
       "usesStructure": false,
@@ -1767,19 +1767,19 @@
       "archetype": "property",
       "lifeStage": "mid_career_fhb",
       "scenario": "s_founder_relief",
-      "action": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "action": "Treat founder relief as irrelevant to the property call and buy only if the established-property case still works after the grace window ends; otherwise move to new builds or wait.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
         "description": "If founder relief fails to arrive and the announced package proceeds instead, holding for a carve-out can mean a worse after-tax exit and a harder negotiation window. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. The carve-out, if it lands, is actually available to the reader rather than politically adjacent to them.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "speculative",
       "usesStructure": false,
@@ -1809,19 +1809,19 @@
       "archetype": "property",
       "lifeStage": "mid_career_fhb",
       "scenario": "s_floor_dropped",
-      "action": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "action": "Treat the housing rules as unchanged and buy only if the property still works once established-property losses quarantine from 1 Jul 2027; the softer CGT side is not enough on its own.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
         "description": "If the floor survives after all, a sale or hold decision built around indexation-only softness may understate the real tax drag. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. Indexation remains the governing logic and is not later traded away in a compromise package.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -1851,19 +1851,19 @@
       "archetype": "property",
       "lifeStage": "mid_career_fhb",
       "scenario": "s_hybrid",
-      "action": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "action": "Even with a softer CGT branch, only proceed if the established-property purchase works after the grace window ends and losses quarantine; otherwise avoid forced-turnover property bets.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027. Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
         "description": "If indexation survives instead, acting like the discount is the main cushion can mis-price the benefit of lower inflation-adjusted gains. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Household cash-flow strain can matter more than a textbook tax improvement. The surviving discount and floor combination is legislated in a form close enough to this scenario to plan against.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test established-property scenario"
+        "label": "Test post-cutoff NG mechanics"
       },
       "verdictTone": "speculative",
       "usesStructure": false,
@@ -1893,19 +1893,19 @@
       "archetype": "property",
       "lifeStage": "peak_earner",
       "scenario": "s_announced",
-      "action": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "action": "If an established-property purchase still works once losses quarantine from 1 Jul 2027, complete it only for grace-window economics; otherwise switch the search to eligible new builds or stand down.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Even the best available move is mostly defensive because this branch bites hard for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
         "description": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. The announced mechanics survive broadly intact through legislation and implementation.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -1935,19 +1935,19 @@
       "archetype": "property",
       "lifeStage": "peak_earner",
       "scenario": "s_delayed",
-      "action": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "action": "Use the delay to test whether the property still works on a quarantined-loss basis, but do not overpay as if full grandfathering on established property were still available.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
         "description": "If the package suddenly proceeds as announced, waiting too calmly can leave less time to act on valuation-reset, deduction-cutoff, or exit-timing mechanics. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. Delay is long enough to matter operationally rather than a symbolic pause.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -1978,18 +1978,18 @@
       "lifeStage": "peak_earner",
       "scenario": "s_repealed",
       "action": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "low",
         "description": "If the announced package unexpectedly lands after all, the reader may have under-prepared for timing and relief questions that become relevant again. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. Repeal is durable enough that there is no need to keep shadow-planning the announced branch.",
+      "keyAssumption": "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "confident",
       "usesStructure": false,
@@ -2019,19 +2019,19 @@
       "archetype": "property",
       "lifeStage": "peak_earner",
       "scenario": "s_founder_relief",
-      "action": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "action": "Treat founder relief as irrelevant to the property call and buy only if the established-property case still works after the grace window ends; otherwise move to new builds or wait.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
         "description": "If founder relief fails to arrive and the announced package proceeds instead, holding for a carve-out can mean a worse after-tax exit and a harder negotiation window. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. The carve-out, if it lands, is actually available to the reader rather than politically adjacent to them.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "speculative",
       "usesStructure": false,
@@ -2061,19 +2061,19 @@
       "archetype": "property",
       "lifeStage": "peak_earner",
       "scenario": "s_floor_dropped",
-      "action": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "action": "Treat the housing rules as unchanged and buy only if the property still works once established-property losses quarantine from 1 Jul 2027; the softer CGT side is not enough on its own.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
         "description": "If the floor survives after all, a sale or hold decision built around indexation-only softness may understate the real tax drag. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. Indexation remains the governing logic and is not later traded away in a compromise package.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "hedged",
       "usesStructure": false,
@@ -2103,19 +2103,19 @@
       "archetype": "property",
       "lifeStage": "peak_earner",
       "scenario": "s_hybrid",
-      "action": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "action": "Even with a softer CGT branch, only proceed if the established-property purchase works after the grace window ends and losses quarantine; otherwise avoid forced-turnover property bets.",
+      "actionRationale": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering. Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering. Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The compromise still leaves this cohort in a bad spot, so the best move is largely defensive.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
         "description": "If indexation survives instead, acting like the discount is the main cushion can mis-price the benefit of lower inflation-adjusted gains. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Top-bracket exposure makes sequencing matter, but only if the reader has genuine flexibility over timing. The surviving discount and floor combination is legislated in a form close enough to this scenario to plan against.",
+      "keyAssumption": "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it.",
       "calculatorAnchor": {
         "scenarioId": "housing-claim-negative-gearing",
-        "label": "Test geared-property scenario"
+        "label": "Test grace-window geared-property case"
       },
       "verdictTone": "speculative",
       "usesStructure": false,
@@ -2145,16 +2145,16 @@
       "archetype": "property",
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_announced",
-      "action": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "action": "Treat existing grandfathered holdings as stable, but judge any expansion or replacement on grace-window and post-2027 quarantined-loss economics rather than pretending fresh established property can still lock in the old rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Even the best available move is mostly defensive because this branch bites hard for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
         "description": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. The announced mechanics survive broadly intact through legislation and implementation.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2187,8 +2187,8 @@
       "archetype": "property",
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_delayed",
-      "action": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
+      "action": "Use the delay to review the strength of grandfathered holdings and any expansion plans, but keep fresh established-property decisions anchored to grace-window and post-commencement economics.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
       "expectedPayoff": "positive",
       "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from not crystallising tax or leverage changes before the rules are real.",
       "regret": {
@@ -2196,7 +2196,7 @@
         "severity": "medium",
         "description": "If the package suddenly proceeds as announced, waiting too calmly can leave less time to act on valuation-reset, deduction-cutoff, or exit-timing mechanics. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. Delay is long enough to matter operationally rather than a symbolic pause.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2230,15 +2230,15 @@
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_repealed",
       "action": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "low",
         "description": "If the announced package unexpectedly lands after all, the reader may have under-prepared for timing and relief questions that become relevant again. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. Repeal is durable enough that there is no need to keep shadow-planning the announced branch.",
+      "keyAssumption": "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2271,16 +2271,16 @@
       "archetype": "property",
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_founder_relief",
-      "action": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "action": "Keep the grandfathered property book on its own merits and do not let founder-relief politics leak into housing decisions that still turn on grace-window and post-2027 rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
         "description": "If founder relief fails to arrive and the announced package proceeds instead, holding for a carve-out can mean a worse after-tax exit and a harder negotiation window. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. The carve-out, if it lands, is actually available to the reader rather than politically adjacent to them.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2313,16 +2313,16 @@
       "archetype": "property",
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_floor_dropped",
-      "action": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "action": "Treat existing grandfathered holdings as unchanged, but judge any new property expansion on the same grace-window and post-2027 housing mechanics before letting the softer CGT branch sway the call.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
         "description": "If the floor survives after all, a sale or hold decision built around indexation-only softness may understate the real tax drag. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. Indexation remains the governing logic and is not later traded away in a compromise package.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2355,16 +2355,16 @@
       "archetype": "property",
       "lifeStage": "pre_retiree_bridge",
       "scenario": "s_hybrid",
-      "action": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "action": "Keep grandfathered holdings disciplined and only expand into established property if the new purchase works despite the same grace-window and quarantined-loss rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases. Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The compromise still leaves this cohort in a bad spot, so the best move is largely defensive.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
         "description": "If indexation survives instead, acting like the discount is the main cushion can mis-price the benefit of lower inflation-adjusted gains. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. Bridge assets actually need to fund pre-super years rather than sitting indefinitely untouched. The surviving discount and floor combination is legislated in a form close enough to this scenario to plan against.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check property versus other assets"
@@ -2397,16 +2397,16 @@
       "archetype": "property",
       "lifeStage": "retiree_decum",
       "scenario": "s_announced",
-      "action": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "action": "Treat existing grandfathered holdings as stable, but judge any expansion or replacement on grace-window and post-2027 quarantined-loss economics rather than pretending fresh established property can still lock in the old rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
         "description": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. The announced mechanics survive broadly intact through legislation and implementation.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2439,8 +2439,8 @@
       "archetype": "property",
       "lifeStage": "retiree_decum",
       "scenario": "s_delayed",
-      "action": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
+      "action": "Use the delay to review the strength of grandfathered holdings and any expansion plans, but keep fresh established-property decisions anchored to grace-window and post-commencement economics.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
       "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from not crystallising tax or leverage changes before the rules are real.",
       "regret": {
@@ -2448,7 +2448,7 @@
         "severity": "medium",
         "description": "If the package suddenly proceeds as announced, waiting too calmly can leave less time to act on valuation-reset, deduction-cutoff, or exit-timing mechanics. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. Delay is long enough to matter operationally rather than a symbolic pause.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2482,15 +2482,15 @@
       "lifeStage": "retiree_decum",
       "scenario": "s_repealed",
       "action": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "low",
         "description": "If the announced package unexpectedly lands after all, the reader may have under-prepared for timing and relief questions that become relevant again. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. Repeal is durable enough that there is no need to keep shadow-planning the announced branch.",
+      "keyAssumption": "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2523,16 +2523,16 @@
       "archetype": "property",
       "lifeStage": "retiree_decum",
       "scenario": "s_founder_relief",
-      "action": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "action": "Keep the grandfathered property book on its own merits and do not let founder-relief politics leak into housing decisions that still turn on grace-window and post-2027 rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
         "description": "If founder relief fails to arrive and the announced package proceeds instead, holding for a carve-out can mean a worse after-tax exit and a harder negotiation window. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. The carve-out, if it lands, is actually available to the reader rather than politically adjacent to them.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2565,16 +2565,16 @@
       "archetype": "property",
       "lifeStage": "retiree_decum",
       "scenario": "s_floor_dropped",
-      "action": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "action": "Treat existing grandfathered holdings as unchanged, but judge any new property expansion on the same grace-window and post-2027 housing mechanics before letting the softer CGT branch sway the call.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The softer mechanics help, but not enough to create a clear strategic advantage for this cohort.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
         "description": "If the floor survives after all, a sale or hold decision built around indexation-only softness may understate the real tax drag. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. Indexation remains the governing logic and is not later traded away in a compromise package.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2607,16 +2607,16 @@
       "archetype": "property",
       "lifeStage": "retiree_decum",
       "scenario": "s_hybrid",
-      "action": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
-      "actionRationale": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "action": "Keep grandfathered holdings disciplined and only expand into established property if the new purchase works despite the same grace-window and quarantined-loss rules.",
+      "actionRationale": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base. Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules. Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
         "description": "If indexation survives instead, acting like the discount is the main cushion can mis-price the benefit of lower inflation-adjusted gains. For property investors, the regret usually shows up as locking in a purchase, refinance, or sale on the wrong tax premise."
       },
-      "keyAssumption": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone. The reader can still choose timing windows rather than being forced to sell into a narrow income need. The surviving discount and floor combination is legislated in a form close enough to this scenario to plan against.",
+      "keyAssumption": "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in.",
       "calculatorAnchor": {
         "scenarioId": "budget-2026-family-home-distortion-claim",
         "label": "Check post-cutoff property case"
@@ -2651,8 +2651,8 @@
       "scenario": "s_announced",
       "action": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -2691,8 +2691,8 @@
       "scenario": "s_delayed",
       "action": "Keep the strategy live but hold off on large one-way tax trades until the implementation window is real rather than hypothetical.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -2731,7 +2731,7 @@
       "scenario": "s_repealed",
       "action": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -2771,8 +2771,8 @@
       "scenario": "s_founder_relief",
       "action": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -2851,8 +2851,8 @@
       "scenario": "s_hybrid",
       "action": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -2891,8 +2891,8 @@
       "scenario": "s_announced",
       "action": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mainly preserves options while the rule change remains costly but manageable.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -2931,8 +2931,8 @@
       "scenario": "s_delayed",
       "action": "Keep the strategy live but hold off on large one-way tax trades until the implementation window is real rather than hypothetical.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -2971,7 +2971,7 @@
       "scenario": "s_repealed",
       "action": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -3011,8 +3011,8 @@
       "scenario": "s_founder_relief",
       "action": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -3092,7 +3092,7 @@
       "action": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -3131,8 +3131,8 @@
       "scenario": "s_announced",
       "action": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -3171,8 +3171,8 @@
       "scenario": "s_delayed",
       "action": "Keep the strategy live but hold off on large one-way tax trades until the implementation window is real rather than hypothetical.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -3211,7 +3211,7 @@
       "scenario": "s_repealed",
       "action": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -3251,8 +3251,8 @@
       "scenario": "s_founder_relief",
       "action": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -3291,8 +3291,8 @@
       "scenario": "s_floor_dropped",
       "action": "Lean into lower-rate realisation windows and inflation-sensitive assets, because indexation without the floor materially softens the tax drag on active compounding.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "strongly_positive",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from a materially softer tax drag once the floor stops flattening outcomes.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -3331,8 +3331,8 @@
       "scenario": "s_hybrid",
       "action": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -3451,7 +3451,7 @@
       "scenario": "s_repealed",
       "action": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -3491,8 +3491,8 @@
       "scenario": "s_founder_relief",
       "action": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -3531,8 +3531,8 @@
       "scenario": "s_floor_dropped",
       "action": "Lean into lower-rate realisation windows and inflation-sensitive assets, because indexation without the floor materially softens the tax drag on active compounding.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "strongly_positive",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from a materially softer tax drag once the floor stops flattening outcomes.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -3572,7 +3572,7 @@
       "action": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -3611,8 +3611,8 @@
       "scenario": "s_announced",
       "action": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The action mainly preserves options while the rule change remains costly but manageable.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -3689,7 +3689,7 @@
       "scenario": "s_repealed",
       "action": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -3728,8 +3728,8 @@
       "scenario": "s_founder_relief",
       "action": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -3807,7 +3807,7 @@
       "action": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
       "actionRationale": "Active strategies are more exposed because tax timing is part of the return engine rather than a side issue. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -3845,8 +3845,8 @@
       "scenario": "s_announced",
       "action": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -3923,7 +3923,7 @@
       "scenario": "s_repealed",
       "action": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -3962,8 +3962,8 @@
       "scenario": "s_founder_relief",
       "action": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "positive",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from a narrower but still meaningful relief path becoming available.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -4001,8 +4001,8 @@
       "scenario": "s_floor_dropped",
       "action": "Re-run exit timing with indexation-only logic and test whether the case for rushing, relocating, or restructuring still survives without the floor.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The softer mechanics help, but not enough to create a clear strategic advantage for this cohort.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -4040,8 +4040,8 @@
       "scenario": "s_hybrid",
       "action": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Early-career readers still have time on their side, so the main hazard is overreacting to policy noise with costly churn. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is avoiding premature complexity while preserving optionality. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -4079,8 +4079,8 @@
       "scenario": "s_announced",
       "action": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -4120,8 +4120,8 @@
       "scenario": "s_delayed",
       "action": "Preserve flexibility and avoid forcing an exit into a temporary calm, because the economic value of waiting may exceed the value of guessing the next start date.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -4161,7 +4161,7 @@
       "scenario": "s_repealed",
       "action": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -4203,7 +4203,7 @@
       "action": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
       "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from qualifying for a materially softer founder path if the carve-out genuinely lands and applies.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -4243,8 +4243,8 @@
       "scenario": "s_floor_dropped",
       "action": "Re-run exit timing with indexation-only logic and test whether the case for rushing, relocating, or restructuring still survives without the floor.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The softer mechanics help, but not enough to create a clear strategic advantage for this cohort.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -4284,8 +4284,8 @@
       "scenario": "s_hybrid",
       "action": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Mid-career builders are usually balancing deposit pressure, mortgage plans, and family cash flow, so flexibility matters more than ideology. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is balance-sheet resilience while housing and tax settings remain noisy. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -4325,8 +4325,8 @@
       "scenario": "s_announced",
       "action": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Even the best available move is mostly defensive because this branch bites hard for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -4366,8 +4366,8 @@
       "scenario": "s_delayed",
       "action": "Preserve flexibility and avoid forcing an exit into a temporary calm, because the economic value of waiting may exceed the value of guessing the next start date.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -4407,7 +4407,7 @@
       "scenario": "s_repealed",
       "action": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -4448,8 +4448,8 @@
       "scenario": "s_founder_relief",
       "action": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
-      "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "expectedPayoff": "positive",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from a narrower but still meaningful relief path becoming available.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -4489,8 +4489,8 @@
       "scenario": "s_floor_dropped",
       "action": "Re-run exit timing with indexation-only logic and test whether the case for rushing, relocating, or restructuring still survives without the floor.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. Dropping the floor softens the harshest flattening effect and re-opens lower-rate or indexation-sensitive sale windows.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from the floor no longer flattening outcomes across brackets.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
       "regret": {
         "ifScenario": "s_hybrid",
         "severity": "medium",
@@ -4530,8 +4530,8 @@
       "scenario": "s_hybrid",
       "action": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Peak earners are more likely to face top-rate tax windows, making sequencing and structure choices more consequential. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "strongly_negative",
+      "payoffNarrative": "Main value is keeping high-marginal-rate decisions explicit rather than accidental. The compromise still leaves this cohort in a bad spot, so the best move is largely defensive.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -4571,8 +4571,8 @@
       "scenario": "s_announced",
       "action": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The action mainly limits damage under a branch that still worsens the economics for this cohort.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -4613,8 +4613,8 @@
       "scenario": "s_delayed",
       "action": "Preserve flexibility and avoid forcing an exit into a temporary calm, because the economic value of waiting may exceed the value of guessing the next start date.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A delay preserves current rules for longer, which makes optionality more valuable than early irreversible moves.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from not crystallising tax or leverage changes before the rules are real.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The action mostly protects optionality while the political timetable stays unresolved.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "medium",
@@ -4655,7 +4655,7 @@
       "scenario": "s_repealed",
       "action": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -4698,7 +4698,7 @@
       "action": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
       "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from qualifying for a materially softer founder path if the carve-out genuinely lands and applies.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -4781,8 +4781,8 @@
       "scenario": "s_hybrid",
       "action": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Bridge-phase households cannot ignore realisation timing because non-super assets may need to fund the years before preservation age. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
-      "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "expectedPayoff": "negative",
+      "payoffNarrative": "Main value is sequencing gains into the cleaner of the plausible regimes. The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",
@@ -4823,8 +4823,8 @@
       "scenario": "s_announced",
       "action": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. Under the announced branch, pre-2027 and post-2027 treatment diverge sharply, so timing and valuation-reset mechanics matter.",
-      "expectedPayoff": "positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+      "expectedPayoff": "neutral",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The action mainly preserves options while the rule change remains costly but manageable.",
       "regret": {
         "ifScenario": "s_repealed",
         "severity": "medium",
@@ -4905,7 +4905,7 @@
       "scenario": "s_repealed",
       "action": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. If repeal lands, status-quo simplification beats defensive manoeuvres built around a rule change that never arrives.",
-      "expectedPayoff": "neutral",
+      "expectedPayoff": "positive",
       "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from returning to a cleaner plan with less defensive churn.",
       "regret": {
         "ifScenario": "s_announced",
@@ -4947,7 +4947,7 @@
       "action": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. A founder carve-out changes the decision tree most where private-business gains dominate lifetime wealth, but legislation risk remains high until the conditions are visible.",
       "expectedPayoff": "strongly_positive",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from qualifying for a materially softer founder path if the carve-out genuinely lands and applies.",
       "regret": {
         "ifScenario": "s_announced",
         "severity": "high",
@@ -5029,7 +5029,7 @@
       "action": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
       "actionRationale": "Founder outcomes depend on cap-table reality, concession eligibility, and whether the exit gain is actually exposed to the post-2027 regime. Retirees care less about accumulation slogans and more about lower-rate windows, pension interactions, and not creating avoidable tax spikes. The hybrid branch preserves some discount logic while keeping a minimum-rate constraint, so old heuristics partly survive but do not fully return.",
       "expectedPayoff": "neutral",
-      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+      "payoffNarrative": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system. The action mostly keeps the portfolio from misreading a messy compromise package.",
       "regret": {
         "ifScenario": "s_floor_dropped",
         "severity": "medium",

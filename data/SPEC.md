@@ -1,14 +1,14 @@
-# Budget 2026 Investor Action Matrix — Build Spec v2
+# Budget 2026 Investor Action Matrix — Build Spec v2.1
 
 **Status:** Handover draft for build agent (revised)
-**Version:** 2 (supersedes v1)
+**Version:** 2.1 (v2 plus negative-gearing cutoff correction patch)
 **Owner site:** https://factual-au.setiyaputra.me
 **Companion app:** https://australia-cgt-reform-calculator.setiyaputra.me
 **Deliverable:** Markdown content files + a JSON data file conforming to `schema.json`. No UI in this scope.
 
 **Changes from v1:**
 - Archetypes reduced from 6 to 4 (passive, property, active, founder)
-- FIRE / rentvester / trust_fo absorbed into `active`; trust-structure concerns moved to a per-cell flag
+- rentvester absorbed into `property`; trust-structure concerns moved into `active` via a per-cell flag; passive FIRE-style accumulators generally treated as `passive`
 - Voter cohort tagging added to each cell via `salientFor.voterCohorts`
 - Political actor axis dropped (party tactics deemed out of scope)
 - Cell count: 180 → 120
@@ -68,19 +68,19 @@ Tone: decision-support framed in primary-source-aware language, not financial ad
 |---|---|---|
 | `passive` | Passive investor | Buy-and-hold index/ETF investor. No alpha-seeking. Long horizon. Returns track the market. |
 | `property` | Property investor | Owns one or more investment properties. May be negatively geared, may use equity to grow portfolio. Rentvesters fall here. |
-| `active` | Active investor | Returns depend materially on the investor's own decisions or effort. Includes frequent traders, options/concentrated bets, FIRE-style tax-optimised accumulators, and self-managed structure users (SMSF, trusts) where the structure is the strategy. |
+| `active` | Active investor | Returns depend materially on the investor's own decisions, turnover, concentration, or structure use. Includes frequent traders, options/concentrated bets, and self-managed structure users (SMSF, trusts) where the structure is the strategy. |
 | `founder` | Founder / business owner | Material equity in a private operating business. Exit gain dominates lifetime wealth. Treated separately because Subdivision 152 and any founder-relief carve-out apply only here. |
 
 **Migration note from v1:**
-- `fire` → `active`
+- `fire` → usually `passive` when the strategy is fundamentally buy-and-hold; only treat as `active` where execution, turnover, or structure is itself the edge
 - `rentvester` → `property` (note dual ETF + IP balance sheet in the archetype brief)
 - `trust_fo` → `active` (with `usesStructure: true` per-cell flag where the recommendation depends on a trust/company structure)
 
-### 3.3 Policy scenarios (6) — unchanged from v1
+### 3.3 Policy scenarios (6)
 
 | ID | Label | What it means for the planner |
 |---|---|---|
-| `s_announced` | Passes as announced | 50% discount replaced by indexation + 30% minimum tax from 1 Jul 2027; NG restricted to new builds from same date; existing CGT assets get a 1 Jul 2027 valuation cost-base reset. |
+| `s_announced` | Passes as announced | **From 1 Jul 2027:** 50% discount replaced by indexation + 30% minimum tax for all CGT assets; NG on established residential property purchased after 7:30 pm AEST 12 May 2026 is quarantined to residential property income/gains. **Grandfathering:** properties held or under exchanged contract before 7:30 pm AEST 12 May 2026 keep current NG and CGT discount treatment. **Grace window:** properties bought 13 May 2026 to 30 Jun 2027 can be negatively geared against any income during that window only. **New builds:** keep NG indefinitely and choose between the 50% discount or indexation at sale. **Existing CGT assets:** valuation cost-base reset at 1 Jul 2027. Super funds, widely held trusts, build-to-rent, and affordable-housing investors excluded from the NG change. |
 | `s_delayed` | Delayed past 2027 election | Start date pushed back or paused; effectively reverts to status quo through the election cycle. |
 | `s_repealed` | Repealed / not legislated | Package fails or is wound back. 50% discount and current NG persist. |
 | `s_founder_relief` | Founder relief carve-out added | Package passes with QSBS/BADR-style relief for qualifying founders. |
@@ -186,6 +186,24 @@ active__pre_retiree_bridge__s_announced
 - **cohortNote:** "Most relevant to professional-class pre-retirees in inner-metro and teal seats who hold material non-super ETF balances and read tax change as a personal-portfolio question."
 - **narrativesReferenced:** `[]`
 
+### 4.4 Corrected property worked example
+
+```
+property__mid_career_fhb__s_announced
+```
+
+- **action:** "If an established-property purchase still works once losses quarantine from 1 Jul 2027, complete it only for grace-window economics; otherwise switch the search to eligible new builds or stand down."
+- **actionRationale:** "Budget night at 7:30 pm AEST on 12 May 2026 has already passed as the grandfathering cutoff. Properties bought from 13 May 2026 to 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward. The strategic question is whether the property still works once those wage-tax offsets disappear."
+- **expectedPayoff:** `neutral`
+- **payoffNarrative:** "The grace-window negative-gearing benefit is real but short-lived. The action's payoff depends far more on whether the property still works once losses quarantine from 1 Jul 2027 than on capturing a temporary deduction."
+- **regret:** `{ ifScenario: "s_repealed", severity: "low", description: "If the package is repealed, the property reverts to full negative-gearing treatment indefinitely, which is a windfall rather than a pure regret. The real regret risk is having paid too much for the asset because grace-window urgency distorted the purchase discipline." }`
+- **keyAssumption:** "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it."
+- **calculatorAnchor:** `{ scenarioId: "housing-claim-negative-gearing", label: "Test post-cutoff NG mechanics" }`
+- **verdictTone:** `speculative`
+- **usesStructure:** `false`
+- **salientFor:** `{ voterCohorts: { demographic: ["millennial", "gen_x"], economic: ["landlord", "fhb_aspirant"], electoral: ["outer_suburb_mortgage_belt"] } }`
+- **cohortNote:** "Politically loudest cell in the matrix because aspiring and existing mortgage-belt landlords face the clearest behaviour change once the grace window replaces any hope of new grandfathering."
+
 ---
 
 ## 5. Calculator anchors — known scenarioIds
@@ -221,6 +239,10 @@ Set `calculatorAnchor: null` when no scenarioId cleanly fits. Do not stretch.
 10. **No predictions about which scenario lands.**
 11. **Voter cohort tags describe salience, not segmentation.** A `millennial` tag doesn't mean "for millennials only"; it means "politically charged for millennials."
 12. **Cohort tags must be defensible.** If you can't write a one-sentence `cohortNote` justifying a tag, drop it.
+13. **Three NG dates must be respected:** 7:30 pm AEST 12 May 2026 (grandfathering cutoff), the 13 May 2026 to 30 Jun 2027 grace window, and 1 Jul 2027 (commencement). Property cells must use the right date for the position they describe.
+14. **NG changes apply to residential property only.** Share, ETF, and commercial-property cells must not import the housing-side NG restriction. Their CGT treatment may still change from 1 Jul 2027.
+15. **Super funds and widely held trusts are excluded from the NG change.** Cells with `usesStructure: true` involving SMSF residential property must not import the housing-side restriction; where CGT treatment for super is unclear, hedge explicitly.
+16. **The new-build carve-out is dual:** indefinite NG access plus a choice between the 50% discount and indexation at sale.
 
 ---
 
@@ -235,6 +257,7 @@ Set `calculatorAnchor: null` when no scenarioId cleanly fits. Do not stretch.
 7. **Differentiation check:** for each (archetype × life_stage), actions must differ across at least 4 of the 6 scenarios.
 8. **Cohort tagging pass:** median cell should carry 2–4 tags total across all dimensions.
 9. **Calculator anchor check:** verify every `scenarioId` exists in §5.
+10. **Grace-window check:** property cells under `s_announced`, `s_delayed`, `s_hybrid`, `s_floor_dropped`, and `s_founder_relief` must distinguish grandfathered holders from grace-window or post-commencement buyers where that changes the action.
 
 ---
 
@@ -281,6 +304,11 @@ Each Markdown file: frontmatter with `id`, `label`, `summary` (≤ 240 chars), `
 - [ ] All 4 archetype Markdown files exist
 - [ ] All 6 scenario Markdown files exist
 - [ ] `cohorts.md` exists documenting the 15 tags
+- [ ] No `property` cell uses `1 Jul 2027` as the grandfathering purchase cutoff for negative gearing
+- [ ] At least one cell per (`property` × life stage) explicitly references the grace window concept
+- [ ] No cell suggests the reader can still act before Budget night unless framed retrospectively
+- [ ] Cells with `usesStructure: true` involving SMSF residential property do not import the NG restriction
+- [ ] New-build property cells reference both indefinite NG access and the 50%-discount-or-indexation choice
 
 ---
 
@@ -290,6 +318,7 @@ Each Markdown file: frontmatter with `id`, `label`, `summary` (≤ 240 chars), `
 2. Cohort tags lean political. Add a `cohortStakes` field to capture *why* the cohort cares (economic interest vs identity vs ideology)? Adds editorial overhead but makes political salience more legible.
 3. `cohortNote` is one sentence by design, but cells like `property__mid_career_fhb__s_announced` are politically loudest. Allow up to 3 sentences when `verdictTone: speculative`?
 4. The separate 30% minimum tax on discretionary trust distributions from 1 Jul 2028 affects `active` cells with `usesStructure: true`. Second regret object, or fold into `keyAssumption`?
+5. The grace-window correction introduces an implicit investor-position distinction: grandfathered holder, grace-window buyer, post-commencement buyer, and new-build buyer. Keep that in prose for now, or promote it to a formal axis in a future v3 if user testing shows repeated misreads?
 
 ---
 

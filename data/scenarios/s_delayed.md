@@ -5,4 +5,4 @@ summary: "Start date pushed back or paused; status quo survives through the elec
 lastReviewed: "2026-05-14"
 ---
 
-Delay is not repeal. Actions in this scenario should preserve optionality and avoid irreversible moves made purely out of deadline fear. Readers need to hear that a delay can still justify paperwork, modelling, and selective preparation without forcing realisation now.
+Delay is not repeal and it does not resurrect the Budget-night grandfathering cutoff. Actions here should preserve optionality, distinguish already-grandfathered holders from grace-window buyers, and avoid pretending a later start date means the old treatment can still be locked in for fresh established-property purchases.

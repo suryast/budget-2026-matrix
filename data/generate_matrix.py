@@ -28,7 +28,7 @@ ARCHETYPES = [
     {
         "id": "active",
         "label": "Active investor",
-        "summary": "Returns depend on own decisions or structure. Includes FIRE, frequent traders, and trust-led strategies.",
+        "summary": "Returns depend on own decisions or deliberate structure use. Includes frequent traders, concentrated bets, and trust-led strategies.",
         "markdownPath": "archetypes/active.md",
     },
     {
@@ -76,7 +76,7 @@ SCENARIOS = [
     {
         "id": "s_announced",
         "label": "Passes as announced",
-        "summary": "Discount replaced by indexation plus a 30 percent floor from 1 Jul 2027; NG restricted to new builds.",
+        "summary": "From 1 Jul 2027 the CGT discount is replaced by indexation plus a 30 percent floor; established residential property bought after Budget night faces quarantined negative gearing, with a grace window through 30 Jun 2027 and a stronger new-build carve-out.",
         "markdownPath": "scenarios/s_announced.md",
     },
     {
@@ -142,8 +142,8 @@ CALCULATOR_ANCHORS = {
     ("passive", "pre_retiree_bridge"): ("budget-2026-fire-bridge-phase-claim", "Open bridge-phase scenario"),
     ("passive", "retiree_decum"): ("budget-2026-fire-bridge-phase-claim", "Stress-test decumulation timing"),
     ("property", "early_career"): ("housing-claim-negative-gearing", "Test established-property scenario"),
-    ("property", "mid_career_fhb"): ("housing-claim-negative-gearing", "Test established-property scenario"),
-    ("property", "peak_earner"): ("housing-claim-negative-gearing", "Test geared-property scenario"),
+    ("property", "mid_career_fhb"): ("housing-claim-negative-gearing", "Test post-cutoff NG mechanics"),
+    ("property", "peak_earner"): ("housing-claim-negative-gearing", "Test grace-window geared-property case"),
     ("property", "pre_retiree_bridge"): ("budget-2026-family-home-distortion-claim", "Check property versus other assets"),
     ("property", "retiree_decum"): ("budget-2026-family-home-distortion-claim", "Check post-cutoff property case"),
     ("active", "early_career"): ("budget-2026-young-etf-home-deposit-claim", "Open active accumulation scenario"),
@@ -175,12 +175,12 @@ ACTION_BASE = {
         "s_hybrid": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
     },
     "property": {
-        "s_announced": "Re-underwrite established-property purchases against post-cutoff deduction rules and prefer new builds or simpler balance sheets if the tax support is core to the case.",
-        "s_delayed": "Keep optionality, but do not overbid for established property just because the cutoff moved; use the delay to refinance, tidy records, and reassess cash flow.",
+        "s_announced": "Base property decisions on whether the holding still works once losses quarantine from 1 Jul 2027, and treat the grace window as a short-term bonus rather than the reason to buy.",
+        "s_delayed": "Use the delay to model the grace-window economics more carefully, but do not treat it as a chance to recover full grandfathering on established property.",
         "s_repealed": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-        "s_founder_relief": "Assume founder relief does not rescue property economics and keep property decisions anchored to housing cash flow, not startup-politics headlines.",
-        "s_floor_dropped": "Treat the housing side as still changed and only the CGT side as softened; revisit whether property still dominates the household balance sheet for the right reason.",
-        "s_hybrid": "Assume the property deduction change still bites while capital-gain timing gets less harsh than the announced model; bias toward holdings that work without forced turnover.",
+        "s_founder_relief": "Keep property decisions anchored to grace-window and post-2027 housing economics, because founder relief does not change the residential negative-gearing rules.",
+        "s_floor_dropped": "Treat the grace-window and post-2027 housing rules as unchanged, and only then ask whether the softer CGT branch improves the property case enough to matter.",
+        "s_hybrid": "Treat the grace-window and post-2027 housing rules as unchanged, then test whether the softer CGT side is enough to justify holdings that still need quarantined-loss tolerance.",
     },
     "active": {
         "s_announced": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
@@ -200,15 +200,6 @@ ACTION_BASE = {
     },
 }
 
-PAYOFF_MAP = {
-    "s_announced": "positive",
-    "s_delayed": "positive",
-    "s_repealed": "neutral",
-    "s_founder_relief": "strongly_positive",
-    "s_floor_dropped": "positive",
-    "s_hybrid": "neutral",
-}
-
 REGRET_TARGET = {
     "s_announced": ("s_repealed", "medium"),
     "s_delayed": ("s_announced", "medium"),
@@ -226,6 +217,188 @@ TONE_MAP = {
     "s_floor_dropped": "hedged",
     "s_hybrid": "speculative",
 }
+
+PAYOFF_MATRIX = {
+    "passive": {
+        "early_career": {
+            "s_announced": "neutral",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "neutral",
+        },
+        "mid_career_fhb": {
+            "s_announced": "neutral",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "neutral",
+        },
+        "peak_earner": {
+            "s_announced": "negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "negative",
+        },
+        "pre_retiree_bridge": {
+            "s_announced": "positive",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "strongly_positive",
+            "s_hybrid": "neutral",
+        },
+        "retiree_decum": {
+            "s_announced": "positive",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "strongly_positive",
+            "s_hybrid": "positive",
+        },
+    },
+    "property": {
+        "early_career": {
+            "s_announced": "negative",
+            "s_delayed": "negative",
+            "s_repealed": "positive",
+            "s_founder_relief": "negative",
+            "s_floor_dropped": "negative",
+            "s_hybrid": "negative",
+        },
+        "mid_career_fhb": {
+            "s_announced": "neutral",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "negative",
+            "s_floor_dropped": "negative",
+            "s_hybrid": "negative",
+        },
+        "peak_earner": {
+            "s_announced": "strongly_negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "negative",
+            "s_floor_dropped": "negative",
+            "s_hybrid": "strongly_negative",
+        },
+        "pre_retiree_bridge": {
+            "s_announced": "strongly_negative",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "negative",
+            "s_floor_dropped": "negative",
+            "s_hybrid": "strongly_negative",
+        },
+        "retiree_decum": {
+            "s_announced": "negative",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "negative",
+            "s_floor_dropped": "neutral",
+            "s_hybrid": "negative",
+        },
+    },
+    "active": {
+        "early_career": {
+            "s_announced": "negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "negative",
+        },
+        "mid_career_fhb": {
+            "s_announced": "neutral",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "neutral",
+        },
+        "peak_earner": {
+            "s_announced": "negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "strongly_positive",
+            "s_hybrid": "negative",
+        },
+        "pre_retiree_bridge": {
+            "s_announced": "positive",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "strongly_positive",
+            "s_hybrid": "neutral",
+        },
+        "retiree_decum": {
+            "s_announced": "neutral",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "neutral",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "neutral",
+        },
+    },
+    "founder": {
+        "early_career": {
+            "s_announced": "negative",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "positive",
+            "s_floor_dropped": "neutral",
+            "s_hybrid": "negative",
+        },
+        "mid_career_fhb": {
+            "s_announced": "negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "strongly_positive",
+            "s_floor_dropped": "neutral",
+            "s_hybrid": "negative",
+        },
+        "peak_earner": {
+            "s_announced": "strongly_negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "positive",
+            "s_floor_dropped": "negative",
+            "s_hybrid": "strongly_negative",
+        },
+        "pre_retiree_bridge": {
+            "s_announced": "negative",
+            "s_delayed": "neutral",
+            "s_repealed": "positive",
+            "s_founder_relief": "strongly_positive",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "negative",
+        },
+        "retiree_decum": {
+            "s_announced": "neutral",
+            "s_delayed": "positive",
+            "s_repealed": "positive",
+            "s_founder_relief": "strongly_positive",
+            "s_floor_dropped": "positive",
+            "s_hybrid": "neutral",
+        },
+    },
+}
+
+
+def expected_payoff(archetype: str, stage: str, scenario: str) -> str:
+    """
+    The payoff reflects the practical result of following the recommended action
+    in that cell, not a one-size-fits-all judgement about the scenario itself.
+    It is intentionally life-stage sensitive, because the same scenario creates
+    different decision quality for accumulators, bridge-phase households, and
+    retirees even within the same archetype.
+    """
+    return PAYOFF_MATRIX[archetype][stage][scenario]
 
 
 def git_head() -> str:
@@ -255,7 +428,7 @@ def build_archetype_briefs() -> None:
         "passive": """
 Passive investors are the easiest cohort to over-dramatise and the easiest cohort to misread. Their core edge is low turnover, long horizon, and not paying tax earlier than necessary. The matrix therefore treats most passive actions as timing and simplicity questions, not as invitations to overhaul the plan.
 
-The main policy sensitivity is around when to crystallise gains that have already accrued before 1 Jul 2027, and whether a future scenario makes deferral or partial realisation more rational. The action language stays deliberate: protect optionality, avoid unnecessary turnover, and only realise early when a real-life spending need or bridge-phase drawdown makes that timing useful.
+This is also where long-horizon FIRE-style accumulators mostly belong when they are still fundamentally buy-and-hold investors rather than high-turnover operators. The main policy sensitivity is around when to crystallise gains that have already accrued before 1 Jul 2027, and whether a future scenario makes deferral or partial realisation more rational. The action language stays deliberate: protect optionality, avoid unnecessary turnover, and only realise early when a real-life spending need or bridge-phase drawdown makes that timing useful.
 """,
         "property": """
 Property investors sit at the sharp end of the negative-gearing redesign, but not every property holder experiences the same pressure. Rentvesters, recent leveraged buyers, and long-held landlords all pass through the same archetype because the practical question is still the same: does the strategy survive with weaker tax support on established housing?
@@ -263,9 +436,9 @@ Property investors sit at the sharp end of the negative-gearing redesign, but no
 The matrix therefore treats property decisions as underwriting and balance-sheet decisions first. It does not assume reform automatically crashes prices or solves housing, and it avoids pretending the main-residence exemption disappeared. Actions focus on cutoff timing, new-build versus established-property choice, and whether the portfolio still works without the old deduction tailwind.
 """,
         "active": """
-The active archetype is intentionally broad: it covers FIRE-style bridge planners, frequent traders, concentrated-bet investors, and structure-driven operators using trusts or SMSFs as part of the strategy. They are collapsed here because their shared vulnerability is that tax timing is part of the return engine, not just an afterthought.
+The active archetype is intentionally narrower than a generic 'engaged investor' label. It is for people whose returns depend materially on turnover, concentrated position-taking, derivatives, or structure-driven execution using trusts or SMSFs as part of the strategy. They are grouped here because tax timing is part of the return engine rather than a background detail.
 
-This brief flags the main sub-types explicitly. FIRE-style users care about bridge-phase realisation timing. Frequent traders care about whether higher turnover loses more after tax. Structure-driven investors care about whether the recommendation quietly assumes a trust or company. Cells set `usesStructure: true` only when the action materially depends on that extra layer.
+Bridge-phase drawdown questions can still matter here, but passive FIRE accumulators are generally better read as passive investors unless their edge really comes from active execution. Frequent traders care about whether higher turnover loses more after tax. Structure-driven investors care about whether the recommendation quietly assumes a trust or company. Cells set `usesStructure: true` only when the action materially depends on that extra layer.
 """,
         "founder": """
 Founders and owner-operators are separated because private-business exits are not just another capital-gain problem. Subdivision 152, active-asset tests, cap-table design, employee equity, and the possibility of a founder-specific carve-out all make this cohort genuinely different from passive or active market investors.
@@ -283,8 +456,8 @@ The matrix therefore refuses two common mistakes. It does not assume every found
 
 def build_scenario_briefs() -> None:
     bodies = {
-        "s_announced": "Treat this as the base-case mechanics file: discount replaced by indexation plus a 30 percent floor from 1 Jul 2027, negative gearing redirected toward new supply, and valuation-reset mechanics doing much of the real work for existing CGT assets. Actions here should sound practical rather than theatrical.",
-        "s_delayed": "Delay is not repeal. Actions in this scenario should preserve optionality and avoid irreversible moves made purely out of deadline fear. Readers need to hear that a delay can still justify paperwork, modelling, and selective preparation without forcing realisation now.",
+        "s_announced": "Treat this as the base-case mechanics file with three dates, not one: the 7:30 pm AEST 12 May 2026 grandfathering cutoff, the 13 May 2026 to 30 Jun 2027 grace window, and the 1 Jul 2027 commencement date. Established residential property bought after Budget night only gets broad negative-gearing access during the grace window, then losses quarantine. New builds keep indefinite access and a stronger sale-side carve-out.",
+        "s_delayed": "Delay is not repeal and it does not resurrect the Budget-night grandfathering cutoff. Actions here should preserve optionality, distinguish already-grandfathered holders from grace-window buyers, and avoid pretending a later start date means the old treatment can still be locked in for fresh established-property purchases.",
         "s_repealed": "This is the clean status-quo branch. Actions should stop defending against a rule change that never arrives and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.",
         "s_founder_relief": "This branch is narrow but politically important. Use speculative language and keep founder-specific relief distinct from broader market-investor logic. The right action usually depends on waiting for legislation rather than assuming relief exists in final form already.",
         "s_floor_dropped": "This branch matters most for lower-rate sellers, retirees, and long-horizon investors whose main objection is the flattening effect of the floor. Actions should distinguish indexation-only softening from a full return to the old regime.",
@@ -406,7 +579,62 @@ def calculator_anchor(archetype: str, stage: str) -> dict | None:
     return {"scenarioId": scenario_id, "label": label}
 
 
+def property_position(stage: str) -> str:
+    if stage in {"early_career", "mid_career_fhb", "peak_earner"}:
+        return "grace_window_buyer"
+    return "grandfathered_holder"
+
+
+def action_text(archetype: str, stage: str, scenario: str) -> str:
+    if archetype != "property":
+        return ACTION_BASE[archetype][scenario]
+
+    position = property_position(stage)
+    if scenario == "s_repealed":
+        return ACTION_BASE[archetype][scenario]
+
+    if position == "grace_window_buyer":
+        return {
+            "s_announced": "If an established-property purchase still works once losses quarantine from 1 Jul 2027, complete it only for grace-window economics; otherwise switch the search to eligible new builds or stand down.",
+            "s_delayed": "Use the delay to test whether the property still works on a quarantined-loss basis, but do not overpay as if full grandfathering on established property were still available.",
+            "s_founder_relief": "Treat founder relief as irrelevant to the property call and buy only if the established-property case still works after the grace window ends; otherwise move to new builds or wait.",
+            "s_floor_dropped": "Treat the housing rules as unchanged and buy only if the property still works once established-property losses quarantine from 1 Jul 2027; the softer CGT side is not enough on its own.",
+            "s_hybrid": "Even with a softer CGT branch, only proceed if the established-property purchase works after the grace window ends and losses quarantine; otherwise avoid forced-turnover property bets.",
+        }[scenario]
+
+    return {
+        "s_announced": "Treat existing grandfathered holdings as stable, but judge any expansion or replacement on grace-window and post-2027 quarantined-loss economics rather than pretending fresh established property can still lock in the old rules.",
+        "s_delayed": "Use the delay to review the strength of grandfathered holdings and any expansion plans, but keep fresh established-property decisions anchored to grace-window and post-commencement economics.",
+        "s_founder_relief": "Keep the grandfathered property book on its own merits and do not let founder-relief politics leak into housing decisions that still turn on grace-window and post-2027 rules.",
+        "s_floor_dropped": "Treat existing grandfathered holdings as unchanged, but judge any new property expansion on the same grace-window and post-2027 housing mechanics before letting the softer CGT branch sway the call.",
+        "s_hybrid": "Keep grandfathered holdings disciplined and only expand into established property if the new purchase works despite the same grace-window and quarantined-loss rules.",
+    }[scenario]
+
+
 def action_rationale(archetype: str, stage: str, scenario: str) -> str:
+    if archetype == "property":
+        position = property_position(stage)
+        stage_notes = {
+            "early_career": "Early-career buyers are the likeliest to still be deciding whether to enter property at all, so the real question is whether the purchase still works once the grace window ends.",
+            "mid_career_fhb": "Mid-career builders are often balancing deposit pressure, mortgage plans, and family cash flow, so the strategic question collapses to whether the property survives quarantined losses after 1 Jul 2027.",
+            "peak_earner": "Peak earners are more exposed to the temptation of short-run tax relief, which is why the brief grace window must not be mistaken for permanent grandfathering.",
+            "pre_retiree_bridge": "Pre-retiree readers are more likely to already hold property, so the main issue is how to manage or expand a grandfathered book without over-reading the grace window for new purchases.",
+            "retiree_decum": "Retiree readers are more likely to be existing holders than new buyers, so the question is whether a grandfathered property still earns its place once expansion options are judged on post-2027 rules.",
+        }[stage]
+        scenario_notes = {
+            "s_announced": "Budget night has already passed as the grandfathering cutoff. Established properties bought between 13 May 2026 and 30 Jun 2027 get negative gearing against any income only during the grace window, then losses quarantine from 1 Jul 2027 onward, while new builds keep indefinite access and retain the 50%-discount-or-indexation choice at sale.",
+            "s_delayed": "A delay buys more time but does not recreate the Budget-night grandfathering cutoff. The reader still has to distinguish between already-grandfathered holdings and grace-window purchases whose long-run economics are judged on quarantined losses, with new builds remaining the cleaner carve-out path.",
+            "s_repealed": "If the package fails, the grace-window concept evaporates and the property decision returns to ordinary yield, leverage, and vacancy discipline under the status quo.",
+            "s_founder_relief": "Founder relief changes startup-exit treatment, not residential negative-gearing mechanics. Property decisions still revolve around grandfathering, the grace window, post-2027 quarantine, and the stronger new-build carve-out that preserves indefinite negative gearing plus a 50%-discount-or-indexation choice at sale.",
+            "s_floor_dropped": "Dropping the CGT floor softens one part of the capital-gains side, but the housing-side mechanics are still the same: grandfathered pre-Budget property, grace-window purchases through 30 Jun 2027, quarantined losses after that for established housing, and new builds retaining the dual carve-out.",
+            "s_hybrid": "Even if some old discount logic survives on the CGT side, the housing-side rule set still runs through the same three positions: grandfathered holders, grace-window buyers, and post-2027 established-property buyers facing quarantined losses, with new builds still the carve-out lane.",
+        }[scenario]
+        prefix = {
+            "grace_window_buyer": "This cell is written from the perspective of a likely grace-window buyer rather than a hypothetical buyer who could still secure full grandfathering.",
+            "grandfathered_holder": "This cell is written from the perspective of a likely grandfathered holder who already has the old treatment and must decide what to do next from that stronger base.",
+        }[position]
+        return " ".join([prefix, stage_notes, scenario_notes])
+
     parts = {
         "passive": "Passive portfolios mostly win by delaying unnecessary tax and avoiding panic turnover.",
         "property": "Property outcomes hinge on whether the holding still works once housing-specific tax support narrows.",
@@ -431,7 +659,10 @@ def action_rationale(archetype: str, stage: str, scenario: str) -> str:
     return " ".join([parts[archetype], stage_notes[stage], scenario_notes[scenario]])
 
 
-def payoff_narrative(archetype: str, stage: str, scenario: str) -> str:
+def payoff_narrative(archetype: str, stage: str, scenario: str, payoff: str) -> str:
+    if archetype == "property" and scenario == "s_announced" and stage == "mid_career_fhb":
+        return "The grace-window negative-gearing benefit is real but short-lived. The action's payoff depends far more on whether the property still works once losses quarantine from 1 Jul 2027 than on capturing a temporary deduction."
+
     stage_phrase = {
         "early_career": "Main value is avoiding premature complexity while preserving optionality.",
         "mid_career_fhb": "Main value is balance-sheet resilience while housing and tax settings remain noisy.",
@@ -440,17 +671,56 @@ def payoff_narrative(archetype: str, stage: str, scenario: str) -> str:
         "retiree_decum": "Main value is protecting lower-rate drawdown windows instead of handing timing risk to the tax system.",
     }[stage]
     scenario_phrase = {
-        "s_announced": "Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
-        "s_delayed": "Upside comes from not crystallising tax or leverage changes before the rules are real.",
-        "s_repealed": "Upside comes from returning to a cleaner plan with less defensive churn.",
-        "s_founder_relief": "Upside comes from qualifying for a softer path if the carve-out genuinely lands and applies.",
-        "s_floor_dropped": "Upside comes from the floor no longer flattening outcomes across brackets.",
-        "s_hybrid": "Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
-    }[scenario]
+        "s_announced": {
+            "strongly_positive": "Upside comes from capturing a materially better path before the post-2027 rules do lasting damage.",
+            "positive": "Upside comes from respecting the regime split rather than pretending every gain is taxed the same way.",
+            "neutral": "The action mainly preserves options while the rule change remains costly but manageable.",
+            "negative": "The action mainly limits damage under a branch that still worsens the economics for this cohort.",
+            "strongly_negative": "Even the best available move is mostly defensive because this branch bites hard for this cohort.",
+        },
+        "s_delayed": {
+            "strongly_positive": "Upside comes from buying real planning time without committing to the wrong irreversible move.",
+            "positive": "Upside comes from not crystallising tax or leverage changes before the rules are real.",
+            "neutral": "The action mostly protects optionality while the political timetable stays unresolved.",
+            "negative": "The delay helps less than it sounds because the underlying economics are still weak for this cohort.",
+            "strongly_negative": "The action only reduces risk at the margin because delay does not fix the core exposure.",
+        },
+        "s_repealed": {
+            "strongly_positive": "Upside comes from fully dropping defensive workarounds and returning to the cleaner status-quo plan.",
+            "positive": "Upside comes from returning to a cleaner plan with less defensive churn.",
+            "neutral": "The main gain is simplification rather than a major improvement in after-tax outcomes.",
+            "negative": "The rule reset helps less than expected because the portfolio still has weak underlying economics.",
+            "strongly_negative": "Even repeal does not rescue the underlying setup, so the action is mostly about controlled damage.",
+        },
+        "s_founder_relief": {
+            "strongly_positive": "Upside comes from qualifying for a materially softer founder path if the carve-out genuinely lands and applies.",
+            "positive": "Upside comes from a narrower but still meaningful relief path becoming available.",
+            "neutral": "The carve-out is mostly noise here, so the action is about staying disciplined rather than capturing a major benefit.",
+            "negative": "The carve-out does little for this cohort, so the action mainly avoids being distracted by someone else's relief.",
+            "strongly_negative": "The political headline offers almost no economic help here, so the action is purely defensive.",
+        },
+        "s_floor_dropped": {
+            "strongly_positive": "Upside comes from a materially softer tax drag once the floor stops flattening outcomes.",
+            "positive": "Upside comes from the floor no longer flattening outcomes across brackets.",
+            "neutral": "The softer mechanics help, but not enough to create a clear strategic advantage for this cohort.",
+            "negative": "The CGT side softens, but the broader economics still leave the action mostly in damage-control territory.",
+            "strongly_negative": "Dropping the floor is not enough to offset the broader downside, so the action remains mainly defensive.",
+        },
+        "s_hybrid": {
+            "strongly_positive": "Upside comes from salvaging more of the old regime than the market had priced in.",
+            "positive": "Upside comes from recognising that some old discount logic survives, but not enough to justify lazy assumptions.",
+            "neutral": "The action mostly keeps the portfolio from misreading a messy compromise package.",
+            "negative": "The surviving discount is not enough to restore the economics, so the action mainly contains downside.",
+            "strongly_negative": "The compromise still leaves this cohort in a bad spot, so the best move is largely defensive.",
+        },
+    }[scenario][payoff]
     return f"{stage_phrase} {scenario_phrase}"
 
 
 def regret_description(archetype: str, stage: str, scenario: str) -> str:
+    if archetype == "property" and scenario == "s_announced" and stage == "mid_career_fhb":
+        return "If the package is repealed, the property reverts to full negative-gearing treatment indefinitely, which is a windfall rather than a pure regret. The real regret risk is having paid too much for the asset because grace-window urgency distorted the purchase discipline."
+
     if_scenario, _severity = REGRET_TARGET[scenario]
     regret_map = {
         "s_announced": "If the package is repealed, the move crystallised tax or reshaped the balance sheet earlier than necessary. The main cost is lost deferral, transaction friction, and opportunity cost.",
@@ -470,6 +740,14 @@ def regret_description(archetype: str, stage: str, scenario: str) -> str:
 
 
 def key_assumption(archetype: str, stage: str, scenario: str) -> str:
+    if archetype == "property":
+        position = property_position(stage)
+        if scenario == "s_repealed":
+            return "The property still stands up on rental yield, leverage resilience, and vacancy discipline once the negative-gearing scare is removed, rather than relying on a brief grace-window story that no longer matters."
+        if position == "grace_window_buyer":
+            return "The property's after-tax cash flow remains sustainable once losses on established residential property are quarantined to residential property income and gains from 1 Jul 2027 onward. If the deal only works by offsetting wage tax indefinitely, the grace window does not rescue it."
+        return "Any existing property advantage comes from being already grandfathered before Budget night. Fresh purchases or expansions are judged on grace-window and post-2027 quarantined-loss economics rather than by pretending the old treatment can still be locked in."
+
     archetype_base = {
         "passive": "The portfolio horizon is real and the investor is not about to force a sale for liquidity reasons that the action ignores.",
         "property": "The property thesis works on cash flow and balance-sheet resilience rather than on policy-driven price optimism alone.",
@@ -516,6 +794,7 @@ def build_cells() -> list[dict]:
             for scenario in SCENARIOS:
                 sc = scenario["id"]
                 if_scenario, severity = REGRET_TARGET[sc]
+                payoff = expected_payoff(a, s, sc)
                 cohorts = {
                     "demographic": demographic_for_stage(s, a),
                     "economic": economic_for(a, s),
@@ -526,10 +805,10 @@ def build_cells() -> list[dict]:
                     "archetype": a,
                     "lifeStage": s,
                     "scenario": sc,
-                    "action": ACTION_BASE[a][sc],
+                    "action": action_text(a, s, sc),
                     "actionRationale": action_rationale(a, s, sc),
-                    "expectedPayoff": PAYOFF_MAP[sc],
-                    "payoffNarrative": payoff_narrative(a, s, sc),
+                    "expectedPayoff": payoff,
+                    "payoffNarrative": payoff_narrative(a, s, sc, payoff),
                     "regret": {
                         "ifScenario": if_scenario,
                         "severity": severity,
@@ -566,6 +845,19 @@ def validate_internal(cells: list[dict]) -> None:
     counts.sort()
     median = counts[len(counts) // 2]
     assert 2 <= median <= 4, median
+    payoff_counts = Counter(cell["expectedPayoff"] for cell in cells)
+    assert payoff_counts["negative"] + payoff_counts["strongly_negative"] > 0, payoff_counts
+    assert payoff_counts["positive"] + payoff_counts["strongly_positive"] > 0, payoff_counts
+    for archetype in [x["id"] for x in ARCHETYPES]:
+        stage_vectors = {
+            stage["id"]: tuple(
+                cell["expectedPayoff"]
+                for cell in cells
+                if cell["archetype"] == archetype and cell["lifeStage"] == stage["id"]
+            )
+            for stage in LIFE_STAGES
+        }
+        assert len(set(stage_vectors.values())) >= 3, (archetype, stage_vectors)
 
 
 def write_matrix_json(cells: list[dict]) -> None:

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Australia's Budget 2026 Matrix</title>
+  <desc id="desc">Social share image for the Budget 2026 CGT and negative gearing matrix.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbf8f1"/>
+      <stop offset="100%" stop-color="#efe7da"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#171411" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1132" height="562" rx="30" fill="#fffdf8" stroke="#1f1a14" stroke-width="3" filter="url(#shadow)"/>
+
+  <rect x="86" y="86" width="222" height="38" rx="19" fill="#d8eee6" stroke="#9bc9ba" stroke-width="2"/>
+  <text x="197" y="111" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="17" font-weight="700" letter-spacing="2.4" fill="#0f5542">AUSTRALIA'S BUDGET 2026</text>
+
+  <text x="86" y="188" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="58" font-weight="700" fill="#171411">CGT &amp; Negative</text>
+  <text x="86" y="250" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="58" font-weight="700" fill="#171411">Gearing Matrix</text>
+
+  <text x="88" y="316" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="26" fill="#5d574f">
+    120 scenario cells across investor archetypes,
+  </text>
+  <text x="88" y="352" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="26" fill="#5d574f">
+    life stages, and policy branches.
+  </text>
+
+  <g transform="translate(86 410)">
+    <rect width="320" height="86" rx="18" fill="#f3efe7" stroke="#1f1a14" stroke-width="2"/>
+    <text x="28" y="34" font-family="'IBM Plex Mono', monospace" font-size="16" font-weight="700" fill="#0b6b53">LIVE VIEWER</text>
+    <text x="28" y="60" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="22" font-weight="600" fill="#171411">2×2 matrix boards + detail drawer</text>
+  </g>
+
+  <g transform="translate(666 82)">
+    <rect x="0" y="0" width="426" height="466" rx="24" fill="#fbf8f1" stroke="#1f1a14" stroke-width="3"/>
+
+    <g transform="translate(28 28)">
+      <rect x="0" y="0" width="172" height="172" rx="18" fill="#fffdf8" stroke="#1f1a14" stroke-width="2"/>
+      <rect x="198" y="0" width="172" height="172" rx="18" fill="#fffdf8" stroke="#1f1a14" stroke-width="2"/>
+      <rect x="0" y="198" width="172" height="172" rx="18" fill="#fffdf8" stroke="#1f1a14" stroke-width="2"/>
+      <rect x="198" y="198" width="172" height="172" rx="18" fill="#fffdf8" stroke="#1f1a14" stroke-width="2"/>
+
+      <text x="18" y="26" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#5d574f">PASSIVE</text>
+      <text x="216" y="26" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#5d574f">PROPERTY</text>
+      <text x="18" y="224" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#5d574f">ACTIVE</text>
+      <text x="216" y="224" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#5d574f">FOUNDER</text>
+
+      <g fill="none" stroke="#d6d0c4" stroke-width="1.2">
+        <path d="M34 58h104M34 84h104M34 110h104M34 136h104"/>
+        <path d="M60 32v130M86 32v130M112 32v130"/>
+        <path d="M232 58h104M232 84h104M232 110h104M232 136h104"/>
+        <path d="M258 32v130M284 32v130M310 32v130"/>
+        <path d="M34 256h104M34 282h104M34 308h104M34 334h104"/>
+        <path d="M60 230v130M86 230v130M112 230v130"/>
+        <path d="M232 256h104M232 282h104M232 308h104M232 334h104"/>
+        <path d="M258 230v130M284 230v130M310 230v130"/>
+      </g>
+
+      <g>
+        <circle cx="48" cy="48" r="8" fill="#0b6b53"/>
+        <circle cx="74" cy="74" r="8" fill="#b7891f"/>
+        <circle cx="100" cy="100" r="8" fill="#b44f3b"/>
+        <circle cx="126" cy="126" r="8" fill="#0b6b53"/>
+
+        <circle cx="246" cy="48" r="8" fill="#b44f3b"/>
+        <circle cx="272" cy="74" r="8" fill="#d08c30"/>
+        <circle cx="298" cy="100" r="8" fill="#8f2f28"/>
+        <circle cx="324" cy="126" r="8" fill="#b44f3b"/>
+
+        <circle cx="48" cy="246" r="8" fill="#d08c30"/>
+        <circle cx="74" cy="272" r="8" fill="#0b6b53"/>
+        <circle cx="100" cy="298" r="8" fill="#0b6b53"/>
+        <circle cx="126" cy="324" r="8" fill="#b7891f"/>
+
+        <circle cx="246" cy="246" r="8" fill="#8f2f28"/>
+        <circle cx="272" cy="272" r="8" fill="#0b6b53"/>
+        <circle cx="298" cy="298" r="8" fill="#d08c30"/>
+        <circle cx="324" cy="324" r="8" fill="#0b6b53"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(666 564)">
+    <circle cx="0" cy="0" r="8" fill="#0b6b53"/>
+    <text x="18" y="6" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="18" fill="#5d574f">positive</text>
+    <circle cx="132" cy="0" r="8" fill="#d08c30"/>
+    <text x="150" y="6" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="18" fill="#5d574f">neutral</text>
+    <circle cx="248" cy="0" r="8" fill="#b44f3b"/>
+    <text x="266" y="6" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="18" fill="#5d574f">negative</text>
+    <circle cx="382" cy="0" r="8" fill="#8f2f28"/>
+    <text x="400" y="6" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="18" fill="#5d574f">strongly negative</text>
+  </g>
+</svg>
