@@ -1,0 +1,21 @@
+# Australia's Budget 2026 Matrix
+
+This site publishes a structured 120-cell scenario matrix for Australia's Budget 2026 CGT and negative gearing changes.
+
+Primary URLs:
+- Human page: https://budget-2026-cgt-negative-gearing-matrix.pages.dev/
+- Structured matrix data: https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/matrix.json
+- JSON schema: https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/schema.json
+- Source spec: https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/SPEC.md
+- Agent context JSON: https://budget-2026-cgt-negative-gearing-matrix.pages.dev/.well-known/ai-context.json
+
+How to read the site:
+- The matrix is organised by archetype, life stage, and policy scenario.
+- Each cell contains an action, rationale, expected payoff, regret branch, and key assumption.
+- `expectedPayoff` evaluates the action under the scenario; it is not a probability or vote recommendation.
+- The content is decision-support analysis, not personal financial advice.
+
+Related resources:
+- Methodology: https://factual-au.setiyaputra.me/fact-check/budget-2026-fairer-tax-without-penalising-aspiration-claim/
+- Calculator: https://australia-cgt-reform-calculator.setiyaputra.me/
+- Source code: https://github.com/suryast/budget-2026-matrix

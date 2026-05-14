@@ -1,0 +1,89 @@
+{
+  "name": "Australia's Budget 2026 Matrix",
+  "site": "Budget 2026 CGT & Negative Gearing Matrix",
+  "version": "1.0",
+  "description": "A public scenario matrix for Australia's Budget 2026 CGT and negative gearing changes, organised across investor archetypes, life stages, and policy scenarios.",
+  "entrypoints": {
+    "humanPage": "https://budget-2026-cgt-negative-gearing-matrix.pages.dev/",
+    "matrixData": "https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/matrix.json",
+    "schema": "https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/schema.json",
+    "spec": "https://budget-2026-cgt-negative-gearing-matrix.pages.dev/data/SPEC.md",
+    "llms": "https://budget-2026-cgt-negative-gearing-matrix.pages.dev/llms.txt"
+  },
+  "contentModel": {
+    "type": "scenario-matrix",
+    "cellCount": 120,
+    "cellIdPattern": "{archetype}__{lifeStage}__{scenario}",
+    "primaryFields": [
+      "action",
+      "actionRationale",
+      "expectedPayoff",
+      "payoffNarrative",
+      "regret",
+      "keyAssumption",
+      "calculatorAnchor",
+      "verdictTone",
+      "usesStructure",
+      "salientFor",
+      "cohortNote",
+      "narrativesReferenced"
+    ]
+  },
+  "axes": {
+    "archetypes": [
+      "passive",
+      "property",
+      "active",
+      "founder"
+    ],
+    "lifeStages": [
+      "early_career",
+      "mid_career_fhb",
+      "peak_earner",
+      "pre_retiree_bridge",
+      "retiree_decum"
+    ],
+    "scenarios": [
+      "s_announced",
+      "s_delayed",
+      "s_repealed",
+      "s_founder_relief",
+      "s_floor_dropped",
+      "s_hybrid"
+    ]
+  },
+  "semantics": {
+    "expectedPayoffScale": [
+      "strongly_positive",
+      "positive",
+      "neutral",
+      "negative",
+      "strongly_negative"
+    ],
+    "verdictTones": [
+      "confident",
+      "hedged",
+      "speculative"
+    ],
+    "interpretationNotes": [
+      "The matrix is decision-support content, not personal financial advice.",
+      "Cells express recommended action under a scenario, not a prediction that the scenario will occur.",
+      "The `expectedPayoff` field evaluates the practical result of following the cell's action, not whether the scenario itself is good.",
+      "For property scenarios, the post-Budget-night grandfathering cutoff, grace window, and 1 July 2027 commencement date are distinct concepts."
+    ]
+  },
+  "relatedResources": {
+    "methodology": "https://factual-au.setiyaputra.me/fact-check/budget-2026-fairer-tax-without-penalising-aspiration-claim/",
+    "calculator": "https://australia-cgt-reform-calculator.setiyaputra.me/",
+    "repository": "https://github.com/suryast/budget-2026-matrix"
+  },
+  "agentGuidance": {
+    "preferredSource": "Use `data/matrix.json` for structured interpretation and the human page for presentation context.",
+    "stableSummary": "This site contains a structured matrix of scenario-based recommendations, tradeoffs, and assumptions across investor types and life stages under Budget 2026 CGT and negative gearing policy branches.",
+    "doNotAssume": [
+      "Do not infer personal advice from any single cell.",
+      "Do not treat narrative emphasis as a probability forecast.",
+      "Do not collapse the property timing rules into a single cutoff date."
+    ]
+  }
+}
