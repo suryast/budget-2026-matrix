@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget 2026 CGT & Negative Gearing Matrix</title>
+    <meta
+      name="description"
+      content="Scenario matrix for Budget 2026 CGT and negative gearing outcomes across investor archetypes, life stages, and policy branches."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Budget 2026 matrix</p>
+        <h1>CGT & Negative Gearing Matrix</h1>
+        <p class="lede">
+          A 120-cell scenario matrix for Australia's Budget 2026 CGT and negative gearing changes,
+          organised by investor archetype, life stage, and policy branch.
+        </p>
+        <div class="hero-meta" id="hero-meta"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Browse the matrix</h2>
+            <p class="muted">Filter by archetype, life stage, or policy scenario.</p>
+          </div>
+          <div class="filters">
+            <label>
+              <span>Archetype</span>
+              <select id="archetype-filter"></select>
+            </label>
+            <label>
+              <span>Life stage</span>
+              <select id="life-stage-filter"></select>
+            </label>
+            <label>
+              <span>Scenario</span>
+              <select id="scenario-filter"></select>
+            </label>
+          </div>
+        </div>
+        <p class="count-line" id="count-line"></p>
+        <div class="grid" id="cards"></div>
+      </section>
+
+      <section class="panel panel-secondary">
+        <h2>Data package</h2>
+        <ul class="link-list">
+          <li><a href="./data/matrix.json">matrix.json</a></li>
+          <li><a href="./data/schema.json">schema.json</a></li>
+          <li><a href="./data/SPEC.md">SPEC.md</a></li>
+          <li><a href="./README.md">README.md</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card-topline">
+          <span class="pill pill-archetype"></span>
+          <span class="pill pill-payoff"></span>
+        </div>
+        <h3 class="card-title"></h3>
+        <p class="card-action"></p>
+        <p class="card-rationale muted"></p>
+        <dl class="meta-list">
+          <div>
+            <dt>Assumption</dt>
+            <dd class="assumption"></dd>
+          </div>
+          <div>
+            <dt>Regret if wrong</dt>
+            <dd class="regret"></dd>
+          </div>
+          <div>
+            <dt>Calculator anchor</dt>
+            <dd class="anchor"></dd>
+          </div>
+        </dl>
+      </article>
+    </template>
+
+    <script>
+      const titleCase = (value) =>
+        value
+          .replaceAll("_", " ")
+          .replaceAll("-", " ")
+          .replace(/\b\w/g, (match) => match.toUpperCase());
+
+      const payoffLabel = {
+        strongly_positive: "Strongly positive",
+        positive: "Positive",
+        neutral: "Neutral",
+        negative: "Negative",
+        strongly_negative: "Strongly negative",
+      };
+
+      const $ = (selector) => document.querySelector(selector);
+
+      function fillSelect(select, options, allLabel) {
+        select.innerHTML = "";
+        const all = document.createElement("option");
+        all.value = "";
+        all.textContent = allLabel;
+        select.appendChild(all);
+        options.forEach((option) => {
+          const el = document.createElement("option");
+          el.value = option.id;
+          el.textContent = option.label;
+          select.appendChild(el);
+        });
+      }
+
+      function renderCards(cells) {
+        const root = $("#cards");
+        root.innerHTML = "";
+        const template = $("#card-template");
+
+        cells.forEach((cell) => {
+          const node = template.content.cloneNode(true);
+          node.querySelector(".pill-archetype").textContent = titleCase(cell.archetype);
+          node.querySelector(".pill-payoff").textContent = payoffLabel[cell.expectedPayoff] || titleCase(cell.expectedPayoff);
+          node.querySelector(".pill-payoff").dataset.payoff = cell.expectedPayoff;
+          node.querySelector(".card-title").textContent =
+            `${titleCase(cell.lifeStage)} • ${titleCase(cell.scenario)}`;
+          node.querySelector(".card-action").textContent = cell.action;
+          node.querySelector(".card-rationale").textContent = cell.actionRationale;
+          node.querySelector(".assumption").textContent = cell.keyAssumption;
+          node.querySelector(".regret").textContent =
+            `${titleCase(cell.regret.severity)} if ${titleCase(cell.regret.ifScenario)}: ${cell.regret.description}`;
+          node.querySelector(".anchor").textContent = cell.calculatorAnchor
+            ? `${cell.calculatorAnchor.label} (${cell.calculatorAnchor.scenarioId})`
+            : "None";
+          root.appendChild(node);
+        });
+      }
+
+      function start(payload) {
+        const archetypeFilter = $("#archetype-filter");
+        const lifeStageFilter = $("#life-stage-filter");
+        const scenarioFilter = $("#scenario-filter");
+        const countLine = $("#count-line");
+
+        fillSelect(archetypeFilter, payload.axes.archetypes, "All archetypes");
+        fillSelect(lifeStageFilter, payload.axes.lifeStages, "All life stages");
+        fillSelect(scenarioFilter, payload.axes.scenarios, "All scenarios");
+
+        $("#hero-meta").innerHTML = `
+          <span><strong>${payload.cells.length}</strong> cells</span>
+          <span><strong>${payload.axes.archetypes.length}</strong> archetypes</span>
+          <span><strong>${payload.axes.lifeStages.length}</strong> life stages</span>
+          <span><strong>${payload.axes.scenarios.length}</strong> scenarios</span>
+          <span>Generated ${payload.generatedAt}</span>
+        `;
+
+        const update = () => {
+          const filtered = payload.cells.filter((cell) => {
+            return (
+              (!archetypeFilter.value || cell.archetype === archetypeFilter.value) &&
+              (!lifeStageFilter.value || cell.lifeStage === lifeStageFilter.value) &&
+              (!scenarioFilter.value || cell.scenario === scenarioFilter.value)
+            );
+          });
+          countLine.textContent = `Showing ${filtered.length} matrix cells`;
+          renderCards(filtered);
+        };
+
+        archetypeFilter.addEventListener("change", update);
+        lifeStageFilter.addEventListener("change", update);
+        scenarioFilter.addEventListener("change", update);
+        update();
+      }
+
+      fetch("./data/matrix.json")
+        .then((response) => response.json())
+        .then(start)
+        .catch((error) => {
+          $("#count-line").textContent = "Failed to load matrix data.";
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
