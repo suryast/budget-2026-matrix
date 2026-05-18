@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://factual-au.setiyaputra.me/schema/matrix.json",
-  "title": "Budget 2026 Investor Action Matrix v2",
-  "description": "Data contract for the archetype x life_stage x scenario action matrix, with voter cohort tagging. See SPEC.md v2 for editorial rules.",
+  "title": "Budget 2026 Investor Action Matrix v2.2",
+  "description": "Data contract for the archetype x life_stage x scenario action matrix, with voter cohort tagging and discretionary-trust sidecar context. See SPEC.md v2.2 for editorial rules.",
   "type": "object",
   "required": ["schemaVersion", "generatedAt", "axes", "cells"],
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
       "type": "string",
-      "const": "2"
+      "const": "2.2"
     },
     "generatedAt": {
       "type": "string",
@@ -120,6 +120,10 @@
         "housing-claim-negative-gearing"
       ]
     },
+    "trustMeasureScenarioId": {
+      "type": "string",
+      "enum": ["tm_announced", "tm_amended_corp", "tm_delayed", "tm_repealed"]
+    },
     "cell": {
       "type": "object",
       "required": [
@@ -128,7 +132,7 @@
         "expectedPayoff", "payoffNarrative",
         "regret", "keyAssumption",
         "calculatorAnchor", "verdictTone",
-        "usesStructure", "salientFor", "cohortNote"
+        "usesStructure", "trustMeasureContext", "salientFor", "cohortNote"
       ],
       "additionalProperties": false,
       "properties": {
@@ -140,7 +144,7 @@
         "lifeStage": { "$ref": "#/definitions/lifeStageId" },
         "scenario": { "$ref": "#/definitions/scenarioId" },
         "action": { "type": "string", "minLength": 8, "maxLength": 240 },
-        "actionRationale": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "actionRationale": { "type": "string", "minLength": 20, "maxLength": 800 },
         "expectedPayoff": {
           "type": "string",
           "enum": ["strongly_positive", "positive", "neutral", "negative", "strongly_negative"]
@@ -176,6 +180,49 @@
           "enum": ["confident", "hedged", "speculative"]
         },
         "usesStructure": { "type": "boolean" },
+        "trustMeasureContext": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": [
+                "trustExposure",
+                "postCommencementImpact",
+                "rolloverRelevant",
+                "rolloverWindowAction",
+                "trustMeasureAssumption",
+                "trustMeasureScenario"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "trustExposure": {
+                  "type": "string",
+                  "enum": [
+                    "bucket_company",
+                    "low_mtr_streaming",
+                    "franked_income_streaming",
+                    "retained_earnings",
+                    "testamentary_planning",
+                    "none"
+                  ]
+                },
+                "postCommencementImpact": {
+                  "type": "string",
+                  "enum": ["punitive", "moderate", "neutral", "favourable"]
+                },
+                "rolloverRelevant": { "type": "boolean" },
+                "rolloverWindowAction": {
+                  "oneOf": [
+                    { "type": "null" },
+                    { "type": "string", "minLength": 20, "maxLength": 400 }
+                  ]
+                },
+                "trustMeasureAssumption": { "type": "string", "minLength": 20, "maxLength": 500 },
+                "trustMeasureScenario": { "$ref": "#/definitions/trustMeasureScenarioId" }
+              }
+            }
+          ]
+        },
         "salientFor": {
           "type": "object",
           "required": ["voterCohorts"],

@@ -2,7 +2,7 @@
 id: "cohorts"
 label: "Voter cohorts"
 summary: "Fifteen salience tags used to describe which electoral slices care most about a matrix cell."
-lastReviewed: "2026-05-14"
+lastReviewed: "2026-05-18"
 ---
 
 These tags describe political salience, not exclusive audiences. Median cell should carry a short set of tags that explain why the action becomes politically loud in that part of the electorate.

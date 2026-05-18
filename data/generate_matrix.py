@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-LAST_REVIEWED = "2026-05-14"
+LAST_REVIEWED = "2026-05-18"
 
 
 ARCHETYPES = [
@@ -108,6 +108,29 @@ SCENARIOS = [
         "label": "Indexation dropped, discount plus floor kept",
         "summary": "No indexation, but the discount survives alongside a minimum effective rate.",
         "markdownPath": "scenarios/s_hybrid.md",
+    },
+]
+
+TRUST_MEASURE_SCENARIOS = [
+    {
+        "id": "tm_announced",
+        "label": "Passes as announced",
+        "summary": "30 percent trustee-level minimum tax starts 1 Jul 2028, corporate beneficiaries get no credit, and non-corporate excess credits stay non-refundable.",
+    },
+    {
+        "id": "tm_amended_corp",
+        "label": "Amended to preserve corporate beneficiary credit",
+        "summary": "Most likely legislative amendment target; bucket-company planning recovers partly, but low-rate streaming and other trust frictions remain.",
+    },
+    {
+        "id": "tm_delayed",
+        "label": "Delayed past start date",
+        "summary": "Trust measure start moves beyond 1 Jul 2028 and current discretionary-trust mechanics continue temporarily.",
+    },
+    {
+        "id": "tm_repealed",
+        "label": "Repealed",
+        "summary": "Measure is dropped before commencement and current discretionary-trust treatment survives.",
     },
 ]
 
@@ -439,11 +462,15 @@ The matrix therefore treats property decisions as underwriting and balance-sheet
 The active archetype is intentionally narrower than a generic 'engaged investor' label. It is for people whose returns depend materially on turnover, concentrated position-taking, derivatives, or structure-driven execution using trusts or SMSFs as part of the strategy. They are grouped here because tax timing is part of the return engine rather than a background detail.
 
 Bridge-phase drawdown questions can still matter here, but passive FIRE accumulators are generally better read as passive investors unless their edge really comes from active execution. Frequent traders care about whether higher turnover loses more after tax. Structure-driven investors care about whether the recommendation quietly assumes a trust or company. Cells set `usesStructure: true` only when the action materially depends on that extra layer.
+
+The trust patch adds a second date to watch for structure-driven active investors: 1 Jul 2028 for the discretionary-trust minimum tax. Peak-earner trust users are most exposed where bucket companies are part of the execution logic. Pre-retiree bridge users are more often exposed through low-rate or franked-income streaming. Where trust exposure is real, the sidecar field records whether the better move is to restructure during the 1 Jul 2027 to 30 Jun 2030 Federal rollover window, while still warning that State duty can remain material.
 """,
         "founder": """
 Founders and owner-operators are separated because private-business exits are not just another capital-gain problem. Subdivision 152, active-asset tests, cap-table design, employee equity, and the possibility of a founder-specific carve-out all make this cohort genuinely different from passive or active market investors.
 
 The matrix therefore refuses two common mistakes. It does not assume every founder gets crushed under the announced settings, because relief can matter. It also does not assume relief is universal. Most founder cells are about explicit modelling, eligibility, and timing under uncertainty, rather than about slogans like 'the government becomes your cofounder.'
+
+The trust patch matters here even when the CGT or negative-gearing branch is unchanged. Founder structures frequently rely on discretionary trusts, bucket companies, or retained trust earnings, so every founder cell now carries an explicit trust sidecar. That sidecar has to do three jobs: describe whether the 1 Jul 2028 trust measure makes bucket-company planning punitive, record the load-bearing assumption about amendment risk around the corporate-beneficiary credit, and say whether the 1 Jul 2027 to 30 Jun 2030 rollover window should be used to migrate into a company or fixed trust before exit planning hardens. Subdivision 152 still matters, but the path to qualify for it may now favour simpler company structures over trust stacks.
 """,
     }
     for item in ARCHETYPES:
@@ -469,6 +496,37 @@ def build_scenario_briefs() -> None:
             {"id": item["id"], "label": item["label"], "summary": item["summary"], "lastReviewed": LAST_REVIEWED},
             bodies[item["id"]],
         )
+
+
+def build_trust_measure_brief() -> None:
+    body = """
+This is a separate sidecar measure, not a fourth matrix axis. It starts on 1 Jul 2028, one year after the CGT and negative-gearing commencement date, and it applies to discretionary trusts without grandfathering for existing structures.
+
+Core mechanics to keep straight:
+
+- Trustees of discretionary trusts face a 30 percent minimum tax from 1 Jul 2028.
+- Non-corporate beneficiaries only get a non-refundable credit, so sub-30 percent marginal-rate streaming loses part of its old value.
+- Corporate beneficiaries receive no credit in the announced version, which is why bucket-company strategies are the main political fault line.
+- Franking credits are used at trustee level first, so low-rate beneficiaries can lose refundability when franked income travels through a discretionary trust.
+- Federal rollover relief is available from 1 Jul 2027 to 30 Jun 2030 for restructures out of a discretionary trust, but that relief does not cover State stamp duty.
+
+Planning use:
+
+- `tm_announced`: default branch where bucket companies, low-MTR streaming, and some franked-income structures get materially worse from 1 Jul 2028.
+- `tm_amended_corp`: use when the cell's main uncertainty is whether Parliament restores some corporate-beneficiary credit and partially revives bucket-company planning.
+- `tm_delayed`: use when the operational value is preserving optionality because the trust measure start date is still sliding.
+- `tm_repealed`: use when the cell is best read on the assumption that current trust flow-through treatment survives.
+"""
+    write_markdown(
+        ROOT / "scenarios/trust_measure.md",
+        {
+            "id": "trust_measure",
+            "label": "Discretionary trust minimum tax sidecar",
+            "summary": "Separate trust-measure brief covering the 1 Jul 2028 commencement, rollover window, and amendment-risk branches.",
+            "lastReviewed": LAST_REVIEWED,
+        },
+        body,
+    )
 
 
 def build_life_stages() -> None:
@@ -572,6 +630,93 @@ def electoral_for(archetype: str, stage: str) -> list[str]:
 
 def uses_structure(archetype: str, stage: str, scenario: str) -> bool:
     return archetype == "active" and stage in {"peak_earner", "pre_retiree_bridge"} and scenario in {"s_announced", "s_floor_dropped", "s_hybrid"}
+
+
+def trust_measure_scenario(main_scenario: str) -> str:
+    return {
+        "s_announced": "tm_announced",
+        "s_delayed": "tm_delayed",
+        "s_repealed": "tm_repealed",
+        "s_founder_relief": "tm_amended_corp",
+        "s_floor_dropped": "tm_announced",
+        "s_hybrid": "tm_amended_corp",
+    }[main_scenario]
+
+
+def trust_measure_exposure(archetype: str, stage: str, scenario: str, structure_flag: bool) -> str | None:
+    if archetype == "founder":
+        return "bucket_company"
+    if not structure_flag:
+        return None
+    if stage == "peak_earner":
+        return "bucket_company"
+    if scenario == "s_floor_dropped":
+        return "franked_income_streaming"
+    return "low_mtr_streaming"
+
+
+def trust_post_commencement_impact(exposure: str, tm_scenario: str) -> str:
+    if tm_scenario == "tm_repealed":
+        return "neutral"
+    if tm_scenario == "tm_delayed":
+        return "moderate"
+    if exposure in {"retained_earnings", "testamentary_planning"}:
+        return "moderate"
+    if tm_scenario == "tm_amended_corp" and exposure == "bucket_company":
+        return "moderate"
+    return "punitive"
+
+
+def trust_rollover_relevant(tm_scenario: str) -> bool:
+    return tm_scenario != "tm_repealed"
+
+
+def trust_rollover_window_action(archetype: str, stage: str, tm_scenario: str) -> str | None:
+    if not trust_rollover_relevant(tm_scenario):
+        return None
+    if archetype == "founder":
+        return (
+            "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; "
+            "Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice."
+        )
+    if stage == "peak_earner":
+        return (
+            "Restructure trust-led trading or bucket-company arrangements before 30 Jun 2030 if the trust measure still looks likely, deferring Federal CGT on the asset transfer while "
+            "treating State duty as a separate cost line that can still bite."
+        )
+    return (
+        "Use the rollover window to simplify low-rate or franked-income streaming structures before 30 Jun 2030 if the trust measure remains live; Federal rollover relief still does not solve "
+        "State duty on any asset transfer."
+    )
+
+
+def trust_measure_assumption(exposure: str, tm_scenario: str) -> str:
+    assumptions = {
+        "tm_announced": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "tm_amended_corp": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "tm_delayed": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "tm_repealed": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+    }
+    if exposure == "franked_income_streaming" and tm_scenario != "tm_repealed":
+        return assumptions[tm_scenario] + " The worst franked-income outcomes are configuration-specific rather than universal, but low-rate beneficiary refundability is the pressure point."
+    if exposure == "low_mtr_streaming" and tm_scenario != "tm_repealed":
+        return assumptions[tm_scenario] + " The load-bearing risk is that sub-30 percent beneficiaries cannot use the excess credit, so the old family-streaming spread compresses hard."
+    return assumptions[tm_scenario]
+
+
+def trust_measure_context(archetype: str, stage: str, scenario: str, structure_flag: bool) -> dict | None:
+    exposure = trust_measure_exposure(archetype, stage, scenario, structure_flag)
+    if exposure is None:
+        return None
+    tm_scenario = trust_measure_scenario(scenario)
+    return {
+        "trustExposure": exposure,
+        "postCommencementImpact": trust_post_commencement_impact(exposure, tm_scenario),
+        "rolloverRelevant": trust_rollover_relevant(tm_scenario),
+        "rolloverWindowAction": trust_rollover_window_action(archetype, stage, tm_scenario),
+        "trustMeasureAssumption": trust_measure_assumption(exposure, tm_scenario),
+        "trustMeasureScenario": tm_scenario,
+    }
 
 
 def calculator_anchor(archetype: str, stage: str) -> dict | None:
@@ -795,6 +940,7 @@ def build_cells() -> list[dict]:
                 sc = scenario["id"]
                 if_scenario, severity = REGRET_TARGET[sc]
                 payoff = expected_payoff(a, s, sc)
+                structure_flag = uses_structure(a, s, sc)
                 cohorts = {
                     "demographic": demographic_for_stage(s, a),
                     "economic": economic_for(a, s),
@@ -817,7 +963,8 @@ def build_cells() -> list[dict]:
                     "keyAssumption": key_assumption(a, s, sc),
                     "calculatorAnchor": calculator_anchor(a, s),
                     "verdictTone": TONE_MAP[sc],
-                    "usesStructure": uses_structure(a, s, sc),
+                    "usesStructure": structure_flag,
+                    "trustMeasureContext": trust_measure_context(a, s, sc, structure_flag),
                     "salientFor": {"voterCohorts": cohorts},
                     "cohortNote": cohort_note(a, s, cohorts),
                     "narrativesReferenced": NARRATIVES[a],
@@ -839,6 +986,18 @@ def validate_internal(cells: list[dict]) -> None:
         total = len(vc["demographic"]) + len(vc["economic"]) + len(vc["electoral"])
         counts.append(total)
         assert cell["cohortNote"] is not None
+        trust_context = cell["trustMeasureContext"]
+        if cell["archetype"] == "founder" or cell["usesStructure"]:
+            assert trust_context is not None, cell["cellId"]
+        else:
+            assert trust_context is None, cell["cellId"]
+        if trust_context is not None:
+            assert trust_context["trustMeasureScenario"] in {entry["id"] for entry in TRUST_MEASURE_SCENARIOS}
+            if trust_context["rolloverRelevant"]:
+                assert trust_context["rolloverWindowAction"] is not None
+                assert "State duty" in trust_context["rolloverWindowAction"]
+            else:
+                assert trust_context["rolloverWindowAction"] is None
         assert "$" not in json.dumps(cell)
         assert "you should" not in cell["action"].lower()
         assert "you should" not in cell["actionRationale"].lower()
@@ -862,7 +1021,7 @@ def validate_internal(cells: list[dict]) -> None:
 
 def write_matrix_json(cells: list[dict]) -> None:
     payload = {
-        "schemaVersion": "2",
+        "schemaVersion": "2.2",
         "generatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "sourceCommit": git_head(),
         "axes": {
@@ -880,6 +1039,7 @@ def main() -> None:
     ensure_dirs()
     build_archetype_briefs()
     build_scenario_briefs()
+    build_trust_measure_brief()
     build_life_stages()
     build_cohorts()
     cells = build_cells()

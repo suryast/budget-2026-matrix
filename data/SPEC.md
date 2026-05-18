@@ -1,7 +1,7 @@
-# Budget 2026 Investor Action Matrix — Build Spec v2.1
+# Budget 2026 Investor Action Matrix — Build Spec v2.2
 
 **Status:** Handover draft for build agent (revised)
-**Version:** 2.1 (v2 plus negative-gearing cutoff correction patch)
+**Version:** 2.2 (v2 plus negative-gearing cutoff correction patch plus discretionary-trust minimum-tax sidecar)
 **Owner site:** https://factual-au.setiyaputra.me
 **Companion app:** https://australia-cgt-reform-calculator.setiyaputra.me
 **Deliverable:** Markdown content files + a JSON data file conforming to `schema.json`. No UI in this scope.
@@ -12,6 +12,11 @@
 - Voter cohort tagging added to each cell via `salientFor.voterCohorts`
 - Political actor axis dropped (party tactics deemed out of scope)
 - Cell count: 180 → 120
+
+**Changes from v2.1:**
+- Every cell now carries `trustMeasureContext`, either populated or explicitly `null`
+- The discretionary-trust minimum tax is handled as a sidecar measure with its own brief at `scenarios/trust_measure.md`
+- Founder cells and `active` cells with `usesStructure: true` now record trust-measure exposure, rollover-window relevance, and the load-bearing amendment assumption
 
 ---
 
@@ -37,6 +42,7 @@ Tone: decision-support framed in primary-source-aware language, not financial ad
 **In scope:**
 - A 4 × 5 archetype-by-life-stage grid, replicated across 6 policy scenarios = 120 cells
 - Markdown long-form for each archetype and each scenario
+- A separate trust-measure scenario brief documenting the discretionary-trust sidecar
 - A single `matrix.json` containing every cell's structured payload
 - Voter cohort tagging on each cell (multi-dimensional taxonomy, §3.4)
 - Cross-links into existing calculator scenarioIds
@@ -137,6 +143,7 @@ Each cell: one (archetype × life_stage × scenario) tuple. 4 × 5 × 6 = 120.
 | `calculatorAnchor` | object \| null | CGT calculator scenarioId link. |
 | `verdictTone` | enum | `confident` \| `hedged` \| `speculative` |
 | `usesStructure` | boolean | True if action requires trust/company/SMSF. |
+| `trustMeasureContext` | object \| null | Required-with-null sidecar for the 1 Jul 2028 discretionary-trust minimum tax. |
 | `salientFor` | object | Voter cohort tagging. See §3.4 and §4.2. |
 | `cohortNote` | string \| null | 1 sentence on political salience. Null if no tags. |
 | `narrativesReferenced` | string[] | Optional. Dashboard narrative IDs. |
@@ -185,6 +192,27 @@ active__pre_retiree_bridge__s_announced
 - **salientFor:** `{ voterCohorts: { demographic: ["gen_x", "boomer"], economic: ["asset_rich_retiree"], electoral: ["inner_metro_progressive", "teal_seat"] } }`
 - **cohortNote:** "Most relevant to professional-class pre-retirees in inner-metro and teal seats who hold material non-super ETF balances and read tax change as a personal-portfolio question."
 - **narrativesReferenced:** `[]`
+
+### 4.5 The `trustMeasureContext` sidecar
+
+The trust measure is not a fourth matrix axis. It is attached per cell.
+
+```
+trustMeasureContext: {
+  trustExposure: "bucket_company" | "low_mtr_streaming" | "franked_income_streaming" | "retained_earnings" | "testamentary_planning" | "none",
+  postCommencementImpact: "punitive" | "moderate" | "neutral" | "favourable",
+  rolloverRelevant: true | false,
+  rolloverWindowAction: string | null,
+  trustMeasureAssumption: string,
+  trustMeasureScenario: "tm_announced" | "tm_amended_corp" | "tm_delayed" | "tm_repealed"
+}
+```
+
+Editorial rules:
+- Trust-measure commencement is `1 Jul 2028`, not `1 Jul 2027`
+- Existing discretionary trusts are **not** grandfathered
+- Federal rollover relief runs from `1 Jul 2027` to `30 Jun 2030`, but State stamp duty is still a separate risk
+- The corporate-beneficiary no-credit rule is the main amendment-risk assumption and belongs in `trustMeasureAssumption`
 
 ### 4.4 Corrected property worked example
 

@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "2",
-  "generatedAt": "2026-05-14T13:59:47Z",
-  "sourceCommit": "c3fb27d80719db7c3299ebb03ed40b62d16a1639",
+  "schemaVersion": "2.2",
+  "generatedAt": "2026-05-18T06:30:49Z",
+  "sourceCommit": "07c8775cdf985801567ae831edc0bc8e02bc24f6",
   "axes": {
     "archetypes": [
       {
@@ -205,6 +205,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -245,6 +246,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -285,6 +287,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -325,6 +328,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -365,6 +369,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -405,6 +410,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -445,6 +451,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -486,6 +493,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -527,6 +535,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -568,6 +577,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -609,6 +619,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -650,6 +661,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -691,6 +703,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -730,6 +743,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -769,6 +783,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -808,6 +823,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -847,6 +863,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -886,6 +903,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -925,6 +943,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -965,6 +984,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1005,6 +1025,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1045,6 +1066,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1085,6 +1107,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1125,6 +1148,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1165,6 +1189,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1205,6 +1230,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1245,6 +1271,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1285,6 +1312,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1325,6 +1353,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1365,6 +1394,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1405,6 +1435,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1447,6 +1478,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1489,6 +1521,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1531,6 +1564,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1573,6 +1607,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1615,6 +1650,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1657,6 +1693,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1699,6 +1736,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1741,6 +1779,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1783,6 +1822,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1825,6 +1865,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1867,6 +1908,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1909,6 +1951,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1951,6 +1994,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -1993,6 +2037,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2035,6 +2080,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2077,6 +2123,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2119,6 +2166,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2161,6 +2209,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2203,6 +2252,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2245,6 +2295,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2287,6 +2338,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2329,6 +2381,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2371,6 +2424,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2413,6 +2467,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2455,6 +2510,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2497,6 +2553,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2539,6 +2596,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2581,6 +2639,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2623,6 +2682,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2665,6 +2725,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2705,6 +2766,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2745,6 +2807,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2785,6 +2848,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2825,6 +2889,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2865,6 +2930,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2905,6 +2971,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2945,6 +3012,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -2985,6 +3053,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3025,6 +3094,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3065,6 +3135,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3105,6 +3176,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3145,6 +3217,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Restructure trust-led trading or bucket-company arrangements before 30 Jun 2030 if the trust measure still looks likely, deferring Federal CGT on the asset transfer while treating State duty as a separate cost line that can still bite.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3185,6 +3265,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3225,6 +3306,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3265,6 +3347,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3305,6 +3388,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Restructure trust-led trading or bucket-company arrangements before 30 Jun 2030 if the trust measure still looks likely, deferring Federal CGT on the asset transfer while treating State duty as a separate cost line that can still bite.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3345,6 +3436,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Restructure trust-led trading or bucket-company arrangements before 30 Jun 2030 if the trust measure still looks likely, deferring Federal CGT on the asset transfer while treating State duty as a separate cost line that can still bite.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3385,6 +3484,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "low_mtr_streaming",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the rollover window to simplify low-rate or franked-income streaming structures before 30 Jun 2030 if the trust measure remains live; Federal rollover relief still does not solve State duty on any asset transfer.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive. The load-bearing risk is that sub-30 percent beneficiaries cannot use the excess credit, so the old family-streaming spread compresses hard.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3425,6 +3532,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3465,6 +3573,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3505,6 +3614,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3545,6 +3655,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "franked_income_streaming",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the rollover window to simplify low-rate or franked-income streaming structures before 30 Jun 2030 if the trust measure remains live; Federal rollover relief still does not solve State duty on any asset transfer.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive. The worst franked-income outcomes are configuration-specific rather than universal, but low-rate beneficiary refundability is the pressure point.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3585,6 +3703,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": true,
+      "trustMeasureContext": {
+        "trustExposure": "low_mtr_streaming",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the rollover window to simplify low-rate or franked-income streaming structures before 30 Jun 2030 if the trust measure remains live; Federal rollover relief still does not solve State duty on any asset transfer.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028. The load-bearing risk is that sub-30 percent beneficiaries cannot use the excess credit, so the old family-streaming spread compresses hard.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3625,6 +3751,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3664,6 +3791,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3703,6 +3831,7 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3742,6 +3871,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3781,6 +3911,7 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3820,6 +3951,7 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": null,
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3859,6 +3991,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3898,6 +4038,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "trustMeasureScenario": "tm_delayed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3937,6 +4085,14 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "neutral",
+        "rolloverRelevant": false,
+        "rolloverWindowAction": null,
+        "trustMeasureAssumption": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+        "trustMeasureScenario": "tm_repealed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -3976,6 +4132,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4015,6 +4179,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4054,6 +4226,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4093,6 +4273,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4134,6 +4322,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "trustMeasureScenario": "tm_delayed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4175,6 +4371,14 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "neutral",
+        "rolloverRelevant": false,
+        "rolloverWindowAction": null,
+        "trustMeasureAssumption": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+        "trustMeasureScenario": "tm_repealed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4216,6 +4420,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4257,6 +4469,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4298,6 +4518,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4339,6 +4567,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4380,6 +4616,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "trustMeasureScenario": "tm_delayed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4421,6 +4665,14 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "neutral",
+        "rolloverRelevant": false,
+        "rolloverWindowAction": null,
+        "trustMeasureAssumption": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+        "trustMeasureScenario": "tm_repealed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4462,6 +4714,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4503,6 +4763,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4544,6 +4812,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4585,6 +4861,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4627,6 +4911,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "trustMeasureScenario": "tm_delayed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4669,6 +4961,14 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "neutral",
+        "rolloverRelevant": false,
+        "rolloverWindowAction": null,
+        "trustMeasureAssumption": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+        "trustMeasureScenario": "tm_repealed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4711,6 +5011,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4753,6 +5061,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4795,6 +5111,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4837,6 +5161,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4878,6 +5210,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes trust-measure commencement slips past 1 Jul 2028, preserving current streaming mechanics temporarily; if the announced start date returns, restructuring decisions need to move into the rollover window faster.",
+        "trustMeasureScenario": "tm_delayed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4919,6 +5259,14 @@
       },
       "verdictTone": "confident",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "neutral",
+        "rolloverRelevant": false,
+        "rolloverWindowAction": null,
+        "trustMeasureAssumption": "Assumes the discretionary-trust minimum tax is dropped before commencement so current trust flow-through treatment survives; if a later bill revives the measure, the current structure becomes more fragile than this cell assumes.",
+        "trustMeasureScenario": "tm_repealed"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -4960,6 +5308,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -5001,6 +5357,14 @@
       },
       "verdictTone": "hedged",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "punitive",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes the 30 percent discretionary-trust minimum tax starts on 1 Jul 2028 as announced and that corporate beneficiaries still receive no credit; if Parliament restores some corporate-beneficiary credit, bucket-company planning becomes less punitive.",
+        "trustMeasureScenario": "tm_announced"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
@@ -5042,6 +5406,14 @@
       },
       "verdictTone": "speculative",
       "usesStructure": false,
+      "trustMeasureContext": {
+        "trustExposure": "bucket_company",
+        "postCommencementImpact": "moderate",
+        "rolloverRelevant": true,
+        "rolloverWindowAction": "Use the 1 Jul 2027 to 30 Jun 2030 rollover window to move discretionary-trust holdings into a company or fixed trust before exit planning hardens; Federal CGT relief does not cover State duty, so NSW, Victoria, and Queensland transfer costs still need separate advice.",
+        "trustMeasureAssumption": "Assumes Parliament preserves some corporate-beneficiary credit while leaving the 30 percent trustee tax and non-refundable low-MTR treatment in place; if that amendment fails, structure-heavy trust planning deteriorates more sharply from 1 Jul 2028.",
+        "trustMeasureScenario": "tm_amended_corp"
+      },
       "salientFor": {
         "voterCohorts": {
           "demographic": [
