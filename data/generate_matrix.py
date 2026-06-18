@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-LAST_REVIEWED = "2026-05-18"
+LAST_REVIEWED = "2026-06-18"
 
 
 ARCHETYPES = [
@@ -93,8 +93,8 @@ SCENARIOS = [
     },
     {
         "id": "s_founder_relief",
-        "label": "Founder relief carve-out added",
-        "summary": "Package passes with founder-specific relief for qualifying private-business gains.",
+        "label": "Small-business/startup carve-out added",
+        "summary": "Package passes with the 50 percent active asset discount threshold expanded to 10 million dollars turnover and a consulted startup carve-out for founders, early investors and ESS employees.",
         "markdownPath": "scenarios/s_founder_relief.md",
     },
     {
@@ -193,7 +193,7 @@ ACTION_BASE = {
         "s_announced": "Stage pre-2027 parcel sales only where they serve a real near-term goal, and keep fresh savings on the long-horizon plan rather than abandoning equities.",
         "s_delayed": "Avoid irreversible pre-emptive sales and keep building under the current rules while preserving records for a possible later transition.",
         "s_repealed": "Drop tax-driven timing trades and return to the simplest low-turnover accumulation plan the portfolio can actually hold through volatility.",
-        "s_founder_relief": "Treat the founder carve-out as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
+        "s_founder_relief": "Treat the small-business and startup carve-outs as noise for a passive portfolio and stay focused on low-turnover accumulation and contribution discipline.",
         "s_floor_dropped": "Prefer deferral over early realisation, but reassess low-bracket sale windows because indexation without the floor softens long-hold outcomes.",
         "s_hybrid": "Keep long holds, but stop relying on inflation uplift and compare every planned sale against the surviving discount plus floor combination.",
     },
@@ -201,7 +201,7 @@ ACTION_BASE = {
         "s_announced": "Base property decisions on whether the holding still works once losses quarantine from 1 Jul 2027, and treat the grace window as a short-term bonus rather than the reason to buy.",
         "s_delayed": "Use the delay to model the grace-window economics more carefully, but do not treat it as a chance to recover full grandfathering on established property.",
         "s_repealed": "Run the property strategy on rental yield, leverage resilience, and vacancy risk rather than on a reform scare that no longer changes the rule set.",
-        "s_founder_relief": "Keep property decisions anchored to grace-window and post-2027 housing economics, because founder relief does not change the residential negative-gearing rules.",
+        "s_founder_relief": "Keep property decisions anchored to grace-window and post-2027 housing economics, because the small-business and startup carve-outs do not change the residential negative-gearing rules.",
         "s_floor_dropped": "Treat the grace-window and post-2027 housing rules as unchanged, and only then ask whether the softer CGT branch improves the property case enough to matter.",
         "s_hybrid": "Treat the grace-window and post-2027 housing rules as unchanged, then test whether the softer CGT side is enough to justify holdings that still need quarantined-loss tolerance.",
     },
@@ -209,7 +209,7 @@ ACTION_BASE = {
         "s_announced": "Map planned realisations and structure-dependent moves before 1 Jul 2027, because active strategies suffer most when tax timing becomes part of the return engine.",
         "s_delayed": "Keep the strategy live but hold off on large one-way tax trades until the implementation window is real rather than hypothetical.",
         "s_repealed": "Simplify where possible and stop paying turnover costs to defend against a tax regime that never arrives.",
-        "s_founder_relief": "Separate private-business exposure from the rest of the active book and avoid letting founder headlines drive unnecessary portfolio churn elsewhere.",
+        "s_founder_relief": "Separate private-business and ESS exposure from the rest of the active book and avoid letting startup headlines drive unnecessary portfolio churn elsewhere.",
         "s_floor_dropped": "Lean into lower-rate realisation windows and inflation-sensitive assets, because indexation without the floor materially softens the tax drag on active compounding.",
         "s_hybrid": "Assume turnover still hurts, but the surviving discount keeps some old optimisation logic alive; emphasise discipline over heroic tax engineering.",
     },
@@ -217,7 +217,7 @@ ACTION_BASE = {
         "s_announced": "Delay non-essential exit timing decisions until the cap table, relief eligibility, and post-2027 exposure are modelled explicitly rather than argued from slogans.",
         "s_delayed": "Preserve flexibility and avoid forcing an exit into a temporary calm, because the economic value of waiting may exceed the value of guessing the next start date.",
         "s_repealed": "Stop building around a founder-tax shock that never lands and refocus on operating value, pricing power, and succession or exit readiness.",
-        "s_founder_relief": "Hold the exit path open long enough to qualify for the carve-out, and structure the sale around the relief conditions instead of generic founder outrage.",
+        "s_founder_relief": "Hold the exit path open long enough to test the 10 million dollar active-asset threshold and startup carve-out conditions before forcing a tax-driven sale.",
         "s_floor_dropped": "Re-run exit timing with indexation-only logic and test whether the case for rushing, relocating, or restructuring still survives without the floor.",
         "s_hybrid": "Model the surviving discount carefully and do not assume the founder problem disappears just because indexation falls away.",
     },
@@ -486,7 +486,7 @@ def build_scenario_briefs() -> None:
         "s_announced": "Treat this as the base-case mechanics file with three dates, not one: the 7:30 pm AEST 12 May 2026 grandfathering cutoff, the 13 May 2026 to 30 Jun 2027 grace window, and the 1 Jul 2027 commencement date. Established residential property bought after Budget night only gets broad negative-gearing access during the grace window, then losses quarantine. New builds keep indefinite access and a stronger sale-side carve-out.",
         "s_delayed": "Delay is not repeal and it does not resurrect the Budget-night grandfathering cutoff. Actions here should preserve optionality, distinguish already-grandfathered holders from grace-window buyers, and avoid pretending a later start date means the old treatment can still be locked in for fresh established-property purchases.",
         "s_repealed": "This is the clean status-quo branch. Actions should stop defending against a rule change that never arrives and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.",
-        "s_founder_relief": "This branch is narrow but politically important. Use speculative language and keep founder-specific relief distinct from broader market-investor logic. The right action usually depends on waiting for legislation rather than assuming relief exists in final form already.",
+        "s_founder_relief": "This branch is narrower than a full repeal but wider than the original founder-relief placeholder. ABC reported on 18 Jun 2026 that the government intends to expand the 50 percent active asset discount from a 2 million dollar turnover ceiling to 10 million dollars, and to consult on a startup carve-out where qualifying new, innovative businesses choose between a 50 percent discount and an inflation discount. Founders, early-stage investors and employees granted shares as remuneration are in scope, but the final eligibility tests are not yet settled. Use hedged language: it is a real policy signal, not a completed statutory safe harbour.",
         "s_floor_dropped": "This branch matters most for lower-rate sellers, retirees, and long-horizon investors whose main objection is the flattening effect of the floor. Actions should distinguish indexation-only softening from a full return to the old regime.",
         "s_hybrid": "This is the oddest branch and should read that way. It leaves some old discount logic alive while still imposing a minimum effective rate. Actions should sound comparative and model-driven, not absolute.",
     }

@@ -2,7 +2,7 @@
 id: "founder"
 label: "Founder / business owner"
 summary: "Material equity in a private operating business. Exit gain dominates lifetime wealth."
-lastReviewed: "2026-05-18"
+lastReviewed: "2026-06-18"
 ---
 
 Founders and owner-operators are separated because private-business exits are not just another capital-gain problem. Subdivision 152, active-asset tests, cap-table design, employee equity, and the possibility of a founder-specific carve-out all make this cohort genuinely different from passive or active market investors.
