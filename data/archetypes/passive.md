@@ -2,7 +2,7 @@
 id: "passive"
 label: "Passive investor"
 summary: "Buy-and-hold index and ETF investor. No alpha-seeking. Long horizon."
-lastReviewed: "2026-06-18"
+lastReviewed: "2026-08-06"
 ---
 
 Passive investors are the easiest cohort to over-dramatise and the easiest cohort to misread. Their core edge is low turnover, long horizon, and not paying tax earlier than necessary. The matrix therefore treats most passive actions as timing and simplicity questions, not as invitations to overhaul the plan.
