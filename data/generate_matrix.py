@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-LAST_REVIEWED = "2026-06-18"
+LAST_REVIEWED = "2026-08-06"
 
 
 ARCHETYPES = [
