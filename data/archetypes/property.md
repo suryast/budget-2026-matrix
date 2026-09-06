@@ -2,7 +2,7 @@
 id: "property"
 label: "Property investor"
 summary: "Owns one or more investment properties. May be negatively geared. Rentvesters fall here."
-lastReviewed: "2026-08-06"
+lastReviewed: "2026-09-06"
 ---
 
 Property investors sit at the sharp end of the negative-gearing redesign, but not every property holder experiences the same pressure. Rentvesters, recent leveraged buyers, and long-held landlords all pass through the same archetype because the practical question is still the same: does the strategy survive with weaker tax support on established housing?

@@ -2,7 +2,7 @@
 id: "trust_measure"
 label: "Discretionary trust minimum tax sidecar"
 summary: "Separate trust-measure brief covering the 1 Jul 2028 commencement, rollover window, and amendment-risk branches."
-lastReviewed: "2026-08-06"
+lastReviewed: "2026-09-06"
 ---
 
 This is a separate sidecar measure, not a fourth matrix axis. It starts on 1 Jul 2028, one year after the CGT and negative-gearing commencement date, and it applies to discretionary trusts without grandfathering for existing structures.

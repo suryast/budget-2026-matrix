@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2.2",
-  "generatedAt": "2026-08-06T10:32:03Z",
-  "sourceCommit": "9ff0e2a1cd0f0add949df3f8fe6e8a125a02f52c",
+  "generatedAt": "2026-09-06T10:34:36Z",
+  "sourceCommit": "922a724672e8344ad287339b44b948e7b55e4674",
   "axes": {
     "archetypes": [
       {
@@ -64,8 +64,8 @@
     "scenarios": [
       {
         "id": "s_announced",
-        "label": "Passes as announced",
-        "summary": "From 1 Jul 2027 the CGT discount is replaced by indexation plus a 30 percent floor; established residential property bought after Budget night faces quarantined negative gearing, with a grace window through 30 Jun 2027 and a stronger new-build carve-out.",
+        "label": "Enacted framework",
+        "summary": "The enacted framework applies from 1 Jul 2027: indexation plus a 30 percent floor replaces the CGT discount; post-Budget-night established property faces quarantined losses after the grace window, while new builds retain carve-outs.",
         "markdownPath": "scenarios/s_announced.md"
       },
       {
@@ -76,8 +76,8 @@
       },
       {
         "id": "s_repealed",
-        "label": "Repealed or not legislated",
-        "summary": "Package fails or is wound back. Current CGT discount and negative gearing persist.",
+        "label": "Repealed or wound back",
+        "summary": "The enacted framework is repealed or wound back before commencement. Current CGT discount and negative gearing persist.",
         "markdownPath": "scenarios/s_repealed.md"
       },
       {
