@@ -1,6 +1,6 @@
 # Budget 2026 Investor Action Matrix — Build Spec v2.2
 
-**Status:** Handover draft for build agent (revised)
+**Status:** Maintained build spec (policy status reviewed 6 Sep 2026)
 **Version:** 2.2 (v2 plus negative-gearing cutoff correction patch plus discretionary-trust minimum-tax sidecar)
 **Owner site:** https://factual-au.setiyaputra.me
 **Companion app:** https://australia-cgt-reform-calculator.setiyaputra.me
@@ -86,9 +86,9 @@ Tone: decision-support framed in primary-source-aware language, not financial ad
 
 | ID | Label | What it means for the planner |
 |---|---|---|
-| `s_announced` | Passes as announced | **From 1 Jul 2027:** 50% discount replaced by indexation + 30% minimum tax for all CGT assets; NG on established residential property purchased after 7:30 pm AEST 12 May 2026 is quarantined to residential property income/gains. **Grandfathering:** properties held or under exchanged contract before 7:30 pm AEST 12 May 2026 keep current NG and CGT discount treatment. **Grace window:** properties bought 13 May 2026 to 30 Jun 2027 can be negatively geared against any income during that window only. **New builds:** keep NG indefinitely and choose between the 50% discount or indexation at sale. **Existing CGT assets:** valuation cost-base reset at 1 Jul 2027. Super funds, widely held trusts, build-to-rent, and affordable-housing investors excluded from the NG change. |
+| `s_announced` | Enacted framework | **Enacted 26 Jun 2026; applies from 1 Jul 2027:** 50% discount replaced by indexation + 30% minimum tax for all CGT assets; NG on established residential property purchased after 7:30 pm AEST 12 May 2026 is quarantined to residential property income/gains. **Grandfathering:** properties held or under exchanged contract before 7:30 pm AEST 12 May 2026 keep current NG and CGT discount treatment. **Grace window:** properties bought 13 May 2026 to 30 Jun 2027 can be negatively geared against any income during that window only. **New builds:** keep NG indefinitely and choose between the 50% discount or indexation at sale. **Existing CGT assets:** valuation cost-base reset at 1 Jul 2027. Super funds, widely held trusts, build-to-rent, and affordable-housing investors excluded from the NG change. |
 | `s_delayed` | Delayed past 2027 election | Start date pushed back or paused; effectively reverts to status quo through the election cycle. |
-| `s_repealed` | Repealed / not legislated | Package fails or is wound back. 50% discount and current NG persist. |
+| `s_repealed` | Repealed or wound back | The enacted framework is repealed or wound back before commencement. The 50% discount and current NG persist. |
 | `s_founder_relief` | Small-business/startup carve-out added | Package passes with the 50% active asset discount threshold expanded from $2m to $10m turnover, plus a consulted startup carve-out for founders, early investors and ESS employees in qualifying “new, innovative” businesses. |
 | `s_floor_dropped` | 30% floor dropped, indexation kept | Minimum tax removed; inflation-indexed cost base remains. |
 | `s_hybrid` | Indexation dropped, 50% discount + floor kept | No inflation indexation, but the 50% discount survives alongside a 30% minimum effective rate. |
@@ -196,6 +196,7 @@ active__pre_retiree_bridge__s_announced
 ### 4.5 The `trustMeasureContext` sidecar
 
 The trust measure is not a fourth matrix axis. It is attached per cell.
+As at 6 Sep 2026, this separate trust measure is not yet law.
 
 ```
 trustMeasureContext: {
@@ -354,6 +355,9 @@ Each Markdown file: frontmatter with `id`, `label`, `summary` (≤ 240 chars), `
 
 - Budget Paper 2, pp.21–22 — CGT and NG policy text
 - Budget 2026 tax explainer — transition mechanics, pre-1985 asset treatment
+- ATO: Reforming negative gearing and capital gains tax — enacted status and 1 Jul 2027 application
+- Income Tax Rates Amendment (Tax Reform No. 1) Act 2026 — assent 26 Jun 2026
+- ATO: Minimum tax on discretionary trusts — not-yet-law status
 - ATO: Small business CGT concessions (Subdiv 152)
 - ATO: Main residence exemption
 - ATO: Tax rates — Australian resident

@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-LAST_REVIEWED = "2026-08-06"
+LAST_REVIEWED = "2026-09-06"
 
 
 ARCHETYPES = [
@@ -75,8 +75,8 @@ LIFE_STAGES = [
 SCENARIOS = [
     {
         "id": "s_announced",
-        "label": "Passes as announced",
-        "summary": "From 1 Jul 2027 the CGT discount is replaced by indexation plus a 30 percent floor; established residential property bought after Budget night faces quarantined negative gearing, with a grace window through 30 Jun 2027 and a stronger new-build carve-out.",
+        "label": "Enacted framework",
+        "summary": "The enacted framework applies from 1 Jul 2027: indexation plus a 30 percent floor replaces the CGT discount; post-Budget-night established property faces quarantined losses after the grace window, while new builds retain carve-outs.",
         "markdownPath": "scenarios/s_announced.md",
     },
     {
@@ -87,8 +87,8 @@ SCENARIOS = [
     },
     {
         "id": "s_repealed",
-        "label": "Repealed or not legislated",
-        "summary": "Package fails or is wound back. Current CGT discount and negative gearing persist.",
+        "label": "Repealed or wound back",
+        "summary": "The enacted framework is repealed or wound back before commencement. Current CGT discount and negative gearing persist.",
         "markdownPath": "scenarios/s_repealed.md",
     },
     {
@@ -483,9 +483,9 @@ The trust patch matters here even when the CGT or negative-gearing branch is unc
 
 def build_scenario_briefs() -> None:
     bodies = {
-        "s_announced": "Treat this as the base-case mechanics file with three dates, not one: the 7:30 pm AEST 12 May 2026 grandfathering cutoff, the 13 May 2026 to 30 Jun 2027 grace window, and the 1 Jul 2027 commencement date. Established residential property bought after Budget night only gets broad negative-gearing access during the grace window, then losses quarantine. New builds keep indefinite access and a stronger sale-side carve-out.",
+        "s_announced": "Treat this as the enacted base-case mechanics file with three dates, not one: the 7:30 pm AEST 12 May 2026 grandfathering cutoff, the 13 May 2026 to 30 Jun 2027 grace window, and the 1 Jul 2027 commencement date. Established residential property bought after Budget night only gets broad negative-gearing access during the grace window, then losses quarantine. New builds keep indefinite access and a stronger sale-side carve-out.",
         "s_delayed": "Delay is not repeal and it does not resurrect the Budget-night grandfathering cutoff. Actions here should preserve optionality, distinguish already-grandfathered holders from grace-window buyers, and avoid pretending a later start date means the old treatment can still be locked in for fresh established-property purchases.",
-        "s_repealed": "This is the clean status-quo branch. Actions should stop defending against a rule change that never arrives and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.",
+        "s_repealed": "This is the repeal-to-status-quo branch. Actions should stop defending against an enacted rule change that is wound back before commencement and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.",
         "s_founder_relief": "This branch is narrower than a full repeal but wider than the original founder-relief placeholder. ABC reported on 18 Jun 2026 that the government intends to expand the 50 percent active asset discount from a 2 million dollar turnover ceiling to 10 million dollars, and to consult on a startup carve-out where qualifying new, innovative businesses choose between a 50 percent discount and an inflation discount. Founders, early-stage investors and employees granted shares as remuneration are in scope, but the final eligibility tests are not yet settled. Use hedged language: it is a real policy signal, not a completed statutory safe harbour.",
         "s_floor_dropped": "This branch matters most for lower-rate sellers, retirees, and long-horizon investors whose main objection is the flattening effect of the floor. Actions should distinguish indexation-only softening from a full return to the old regime.",
         "s_hybrid": "This is the oddest branch and should read that way. It leaves some old discount logic alive while still imposing a minimum effective rate. Actions should sound comparative and model-driven, not absolute.",

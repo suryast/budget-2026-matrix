@@ -12,8 +12,10 @@ Primary URLs:
 How to read the site:
 - The matrix is organised by archetype, life stage, and policy scenario.
 - Each cell contains an action, rationale, expected payoff, regret branch, and key assumption.
+- Each applicable cell also carries `trustMeasureContext` for the separate discretionary-trust minimum-tax proposal.
 - `expectedPayoff` evaluates the action under the scenario; it is not a probability or vote recommendation.
 - The content is decision-support analysis, not personal financial advice.
+- Policy status reviewed 6 September 2026: the CGT and negative-gearing framework is law and applies from 1 July 2027; the discretionary-trust minimum-tax measure is not yet law.
 
 Related resources:
 - Methodology: https://factual-au.setiyaputra.me/fact-check/budget-2026-fairer-tax-without-penalising-aspiration-claim/

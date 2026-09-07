@@ -2,7 +2,7 @@
 id: "active"
 label: "Active investor"
 summary: "Returns depend on own decisions or deliberate structure use. Includes frequent traders, concentrated bets, and trust-led strategies."
-lastReviewed: "2026-08-06"
+lastReviewed: "2026-09-06"
 ---
 
 The active archetype is intentionally narrower than a generic 'engaged investor' label. It is for people whose returns depend materially on turnover, concentrated position-taking, derivatives, or structure-driven execution using trusts or SMSFs as part of the strategy. They are grouped here because tax timing is part of the return engine rather than a background detail.

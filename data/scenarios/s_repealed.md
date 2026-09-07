@@ -1,8 +1,8 @@
 ---
 id: "s_repealed"
-label: "Repealed or not legislated"
-summary: "Package fails or is wound back. Current CGT discount and negative gearing persist."
-lastReviewed: "2026-08-06"
+label: "Repealed or wound back"
+summary: "The enacted framework is repealed or wound back before commencement. Current CGT discount and negative gearing persist."
+lastReviewed: "2026-09-06"
 ---
 
-This is the clean status-quo branch. Actions should stop defending against a rule change that never arrives and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.
+This is the repeal-to-status-quo branch. Actions should stop defending against an enacted rule change that is wound back before commencement and should explicitly call out the regret of having crystallised tax or reshaped a balance sheet for no reason.
