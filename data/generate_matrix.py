@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-LAST_REVIEWED = "2026-09-06"
+LAST_REVIEWED = "2026-10-06"
 
 
 ARCHETYPES = [
@@ -501,6 +501,8 @@ def build_scenario_briefs() -> None:
 def build_trust_measure_brief() -> None:
     body = """
 This is a separate sidecar measure, not a fourth matrix axis. It starts on 1 Jul 2028, one year after the CGT and negative-gearing commencement date, and it applies to discretionary trusts without grandfathering for existing structures.
+
+The ATO still lists the measure as not yet law. Exposure-draft consultation ran from 3 Sep to 18 Sep 2026 and is now closed.
 
 Core mechanics to keep straight:
 
