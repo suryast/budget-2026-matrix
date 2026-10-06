@@ -50,9 +50,9 @@ The repo now includes:
 - the corrected post-Budget-night negative-gearing grace-window logic
 - the trust-measure sidecar with rollover-window and bucket-company coverage
 
-Policy status reviewed 6 Sep 2026:
+Policy status reviewed 6 Oct 2026:
 
 - The CGT and negative-gearing framework is now law and applies from 1 Jul 2027. See the [ATO status page](https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/tax-reform-boosting-home-ownership-reforming-negative-gearing-and-capital-gains-tax).
-- The separate discretionary-trust minimum-tax measure remains not yet law. See the [ATO trust-measure status page](https://www.ato.gov.au/about-ato/new-legislation/in-detail/businesses/tax-reform-introducing-a-minimum-tax-on-discretionary-trusts).
+- The separate discretionary-trust minimum-tax measure remains not yet law; exposure-draft consultation closed on 18 Sep 2026. See the [ATO trust-measure status page](https://www.ato.gov.au/about-ato/new-legislation/in-detail/businesses/tax-reform-introducing-a-minimum-tax-on-discretionary-trusts).
 
 It remains versioned separately from `factual-au`, but links back to the broader methodology and calculator ecosystem from the deployed UI.

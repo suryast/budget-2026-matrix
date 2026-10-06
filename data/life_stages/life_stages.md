@@ -2,7 +2,7 @@
 id: "life_stages"
 label: "Life stages"
 summary: "Reference note covering the five life-stage definitions used across the matrix."
-lastReviewed: "2026-09-06"
+lastReviewed: "2026-10-06"
 ---
 
 ## Early-career accumulator (20s)

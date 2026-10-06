@@ -1,6 +1,6 @@
 # Budget 2026 Investor Action Matrix — Build Spec v2.2
 
-**Status:** Maintained build spec (policy status reviewed 6 Sep 2026)
+**Status:** Maintained build spec (policy status reviewed 6 Oct 2026)
 **Version:** 2.2 (v2 plus negative-gearing cutoff correction patch plus discretionary-trust minimum-tax sidecar)
 **Owner site:** https://factual-au.setiyaputra.me
 **Companion app:** https://australia-cgt-reform-calculator.setiyaputra.me
@@ -196,7 +196,7 @@ active__pre_retiree_bridge__s_announced
 ### 4.5 The `trustMeasureContext` sidecar
 
 The trust measure is not a fourth matrix axis. It is attached per cell.
-As at 6 Sep 2026, this separate trust measure is not yet law.
+As at 6 Oct 2026, this separate trust measure is not yet law. Exposure-draft consultation ran from 3 Sep to 18 Sep 2026 and is now closed.
 
 ```
 trustMeasureContext: {
